@@ -1,0 +1,68 @@
+<!--
+	
+-->
+<project name="Eclipse-SVG" default="dist" basedir=".">
+	<description>
+        Rasterizes the SVG icons into formats suitable for runtime use.
+    </description>
+
+	<property name="src" location="src/main/java/" />
+	<property name="build" location="build" />
+	<property name="target" location="target" />
+	<property name="dist" location="dist" />
+
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+	</target>
+
+	<!--
+    Build the rasterization utility.
+  -->
+	<target name="compile" depends="init" description="compile the source ">
+
+		<path id="classpath">
+			<pathelement location="${build}" />
+			<fileset dir=".">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+		<javac srcdir="${src}" destdir="${build}">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<!--
+    Rasterize the Eclipse icon set.
+  -->
+	<target name="render" depends="compile" description="Render the icons">
+
+		<path id="classpath">
+			<pathelement location="${build}" />
+			<fileset dir=".">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+		<java classname="RasterizerUtil">
+			<classpath refid="classpath">
+			</classpath>
+		</java>
+	</target>
+
+	<!--
+     Package the icon set up for distribution.
+  -->
+	<target name="dist" depends="render" description="Package up the icon sets">
+	</target>
+
+	<!-- Clean up the icons and classes -->
+	<target name="clean" description="clean up">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+		<delete dir="${target}" />
+	</target>
+</project>
