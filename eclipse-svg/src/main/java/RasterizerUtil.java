@@ -18,7 +18,8 @@ import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 
-import com.mortennobel.imagescaling.AdvancedResizeOp;
+import com.jhlabs.image.GrayscaleFilter;
+import com.jhlabs.image.HSBAdjustFilter;
 import com.mortennobel.imagescaling.ResampleFilters;
 import com.mortennobel.imagescaling.ResampleOp;
 
@@ -28,6 +29,8 @@ import com.mortennobel.imagescaling.ResampleOp;
  *
  */
 public class RasterizerUtil {
+
+	private static final String PNG = "PNG";
 
 	/**
 	 * <p>IconDef is a definition instance used to define an icon
@@ -86,9 +89,7 @@ public class RasterizerUtil {
 	 */
 	public void createIcon(File input, File outputDir, int[] sizes) {
 		String name = input.getName();
-		System.out.println("NAME: " + name);
 		String[] split = name.split("\\.(?=[^\\.]+$)");
-		System.out.println(split.length);
 		
 		sourceDirs.add(new IconDef(split[0], input, outputDir, sizes));
 	}
@@ -111,25 +112,46 @@ public class RasterizerUtil {
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
-				
-				// Icons lose definition when rendered direct to 16x16 with Batik
-				// Here we resize a 32x32 image down, which gives better results
-				if(size == 32) {
-					try {
-						System.out.println("Rasterizing: " + outputFile.getName() + " at " + 16 + "x" + 16);
-						BufferedImage read = ImageIO.read(outputFile);
+
+				try {
+					BufferedImage read = ImageIO.read(outputFile);
+					
+					GrayscaleFilter grayFilter = new GrayscaleFilter();
+					
+					HSBAdjustFilter desaturator = new HSBAdjustFilter();
+						desaturator.setBFactor(0.3f);
 						
-						ResampleOp resampleOp = new ResampleOp (16,16);
-						resampleOp.setFilter(ResampleFilters.getLanczos3Filter());
-		                resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.VerySharp);
-		                BufferedImage rescaled = resampleOp.filter(read, null);
-		                
-		                ImageIO.write(rescaled, "PNG", 
-		                                new File(dir.outputPath, dir.nameBase + 16 + ".png"));
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
+					BufferedImage desaturated = desaturator.filter(grayFilter.filter(read, null), null);
+
+					System.out.println("Rasterizing desaturated: " + outputFile.getName() + " at " + size + "x" + size);
+					
+	                ImageIO.write(desaturated, PNG, 
+                            new File(dir.outputPath, dir.nameBase + size + "-grey.png"));
+					
+					// Icons lose definition when rendered direct to 16x16 with Batik
+					// Here we resize a 32x32 image down, which gives better results
+					if(size == 32) {
+							System.out.println("Rasterizing: " + outputFile.getName() + " at " + 16 + "x" + 16);
+							
+							ResampleOp resampleOp = new ResampleOp (16,16);
+								resampleOp.setFilter(ResampleFilters.getLanczos3Filter());
+								//resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
+								resampleOp.setNumberOfThreads(Runtime.getRuntime().availableProcessors());
+								
+							BufferedImage rescaled = resampleOp.filter(read, null);
+			                
+			                ImageIO.write(rescaled, PNG, 
+			                                new File(dir.outputPath, dir.nameBase + 16 + ".png"));
+		
+							BufferedImage desaturated16 = desaturator.filter(grayFilter.filter(rescaled, null), null);
+
+							System.out.println("Rasterizing desaturated: " + outputFile.getName() + " at " + 16 + "x" + 16);
+			                ImageIO.write(desaturated16, PNG, 
+			                		new File(dir.outputPath, dir.nameBase + 16 + "-grey.png"));
 					}
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 			}
 		}
@@ -144,22 +166,22 @@ public class RasterizerUtil {
 	 */
 	public static void renderIcon(int width, int height, InputStream input, OutputStream stream) {
         PNGTranscoder t = new PNGTranscoder();
-        t.addTranscodingHint(PNGTranscoder.KEY_WIDTH, new Float(width));
-        t.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, new Float(height));
-        
-        t.setErrorHandler(new ErrorHandler() {
-			public void warning(TranscoderException arg0) throws TranscoderException {
-				System.out.println("WARN: " + arg0.getMessage());
-			}
-			
-			public void fatalError(TranscoderException arg0) throws TranscoderException {
-				System.out.println("FATAL: " + arg0.getMessage());
-			}
-			
-			public void error(TranscoderException arg0) throws TranscoderException {
-				System.out.println("ERROR: " + arg0.getMessage());
-			}
-		});
+        	t.addTranscodingHint(PNGTranscoder.KEY_WIDTH, new Float(width));
+        	t.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, new Float(height));
+        	
+	        t.setErrorHandler(new ErrorHandler() {
+				public void warning(TranscoderException arg0) throws TranscoderException {
+					System.out.println("WARN: " + arg0.getMessage());
+				}
+				
+				public void fatalError(TranscoderException arg0) throws TranscoderException {
+					System.out.println("FATAL: " + arg0.getMessage());
+				}
+				
+				public void error(TranscoderException arg0) throws TranscoderException {
+					System.out.println("ERROR: " + arg0.getMessage());
+				}
+			});
 
         TranscoderInput tinput = new TranscoderInput(input);
         TranscoderOutput output = new TranscoderOutput(stream);
