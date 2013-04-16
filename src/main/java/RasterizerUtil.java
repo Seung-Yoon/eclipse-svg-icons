@@ -24,8 +24,10 @@ import com.mortennobel.imagescaling.ResampleFilters;
 import com.mortennobel.imagescaling.ResampleOp;
 
 /**
+ * <p>Rasterized the Eclipse SVG icon set into raster PNG images
+ * that can be readily used in an Eclipse product.</p>
  * 
- * @author tmccrary
+ * @author Tony McCrary (tmccrary@l33tlabs.com)
  *
  */
 public class RasterizerUtil {
