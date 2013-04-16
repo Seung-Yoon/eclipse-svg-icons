@@ -5,11 +5,5 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>SVG Icons for Eclipse</name>
   <description>A collection of the Eclipse Workbench icons recreated in SVG format.</description>
-  <dependencies>
-  	<dependency>
-  		<groupId>batik</groupId>
-  		<artifactId>batik</artifactId>
-  		<version>1.5</version>
-  	</dependency>
-  </dependencies>
+ 
 </project>
