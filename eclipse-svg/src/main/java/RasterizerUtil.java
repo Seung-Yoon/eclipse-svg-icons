@@ -19,18 +19,45 @@ import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
 
 import com.mortennobel.imagescaling.AdvancedResizeOp;
+import com.mortennobel.imagescaling.ResampleFilters;
 import com.mortennobel.imagescaling.ResampleOp;
 
-
+/**
+ * 
+ * @author tmccrary
+ *
+ */
 public class RasterizerUtil {
 
-	class IconDir {
+	/**
+	 * <p>IconDef is a definition instance used to define an icon
+	 * to rasterize, where to put it and the dimensions to render it at.</p>
+	 * 
+	 * @author tmccrary
+	 *
+	 */
+	class IconDef {
+		
+		/** */
 		String nameBase;
+		
+		/** */
 		File inputPath;
+		
+		/** */
 		int[] sizes;
+		
+		/** */
 		File outputPath;
 		
-		public IconDir(String nameBase, File inputPath, File outputPath, int[] sizes) {
+		/**
+		 * 
+		 * @param nameBase
+		 * @param inputPath
+		 * @param outputPath
+		 * @param sizes
+		 */
+		public IconDef(String nameBase, File inputPath, File outputPath, int[] sizes) {
 			this.nameBase = nameBase;
 			this.sizes = sizes;
 			this.inputPath = inputPath;
@@ -38,24 +65,39 @@ public class RasterizerUtil {
 		}
 	}
 	
-	private List<IconDir> sourceDirs;
+	/** */
+	private List<IconDef> sourceDirs;
+
+	/** */
 	private static final int[] SIZES = new int[] { 32, 64, 128, 256, 512, 1024 };
 	
+	/**
+	 * 
+	 */
 	public RasterizerUtil() {
-		sourceDirs = new ArrayList<IconDir>();
+		sourceDirs = new ArrayList<IconDef>();
 	}
 	
-	public void createIcon(File input, File output, int[] sizes) {
+	/**
+	 * 
+	 * @param input
+	 * @param outputDir
+	 * @param sizes
+	 */
+	public void createIcon(File input, File outputDir, int[] sizes) {
 		String name = input.getName();
 		System.out.println("NAME: " + name);
 		String[] split = name.split("\\.(?=[^\\.]+$)");
 		System.out.println(split.length);
 		
-		sourceDirs.add(new IconDir(split[0], input, output, sizes));
+		sourceDirs.add(new IconDef(split[0], input, outputDir, sizes));
 	}
 	
+	/**
+	 * 
+	 */
 	public void rasterize() {
-		for(IconDir dir : sourceDirs) {
+		for(IconDef dir : sourceDirs) {
 			int[] sizes = dir.sizes;
 			
 			for(int size : sizes) {
@@ -65,18 +107,21 @@ public class RasterizerUtil {
 					FileInputStream fileInputStream = new FileInputStream(dir.inputPath);
 					FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
 					System.out.println("Rasterizing: " + outputFile.getName() + " at " + size + "x" + size);
-					rastersizeSVG(size, size, fileInputStream, fileOutputStream);
+					renderIcon(size, size, fileInputStream, fileOutputStream);
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
 				}
 				
+				// Icons lose definition when rendered direct to 16x16 with Batik
+				// Here we resize a 32x32 image down, which gives better results
 				if(size == 32) {
 					try {
 						System.out.println("Rasterizing: " + outputFile.getName() + " at " + 16 + "x" + 16);
 						BufferedImage read = ImageIO.read(outputFile);
 						
 						ResampleOp resampleOp = new ResampleOp (16,16);
-		                //resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.VerySharp);
+						resampleOp.setFilter(ResampleFilters.getLanczos3Filter());
+		                resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.VerySharp);
 		                BufferedImage rescaled = resampleOp.filter(read, null);
 		                
 		                ImageIO.write(rescaled, "PNG", 
@@ -90,7 +135,14 @@ public class RasterizerUtil {
 		}
 	}
 	
-	public static void rastersizeSVG(int width, int height, InputStream input, OutputStream stream) {
+	/**
+	 * 
+	 * @param width
+	 * @param height
+	 * @param input
+	 * @param stream
+	 */
+	public static void renderIcon(int width, int height, InputStream input, OutputStream stream) {
         PNGTranscoder t = new PNGTranscoder();
         t.addTranscodingHint(PNGTranscoder.KEY_WIDTH, new Float(width));
         t.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, new Float(height));
@@ -123,6 +175,13 @@ public class RasterizerUtil {
         }
 	}
 	
+	/**
+	 * 
+	 * @param raster
+	 * @param outputName
+	 * @param iconDir
+	 * @param outputDir
+	 */
 	public static void walkIconDir(RasterizerUtil raster, String outputName, File iconDir, File outputDir) {
 		File[] listFiles = iconDir.listFiles();
 		
@@ -131,6 +190,12 @@ public class RasterizerUtil {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param raster
+	 * @param svgDir
+	 * @param outputDir
+	 */
 	private static void createIcons(RasterizerUtil raster, File svgDir,
 			File outputDir) {
 		
@@ -146,17 +211,18 @@ public class RasterizerUtil {
 	}
 
 	/**
+	 * 
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		RasterizerUtil raster = new RasterizerUtil();
 		
-		File mavenTarget = new File("target/");
-
+		File mavenTargetDir = new File("target/");
 		File antUi = new File("src/main/resources/org.eclipse.ant.ui/icons/full/");
 		
-		File antUiOutput = new File(mavenTarget, "org.eclipse.ant.ui");
-		antUiOutput.mkdirs();
+		File antUiOutput = new File(mavenTargetDir, "org.eclipse.ant.ui");
+			antUiOutput.mkdirs();
 		
 		walkIconDir(raster, "org.eclipse.ant.ui", antUi, antUiOutput);
 		

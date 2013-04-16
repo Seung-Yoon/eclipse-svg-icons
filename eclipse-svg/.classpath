@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="batik-anim.jar"/>
+	<classpathentry kind="lib" path="batik-awt-util.jar"/>
+	<classpathentry kind="lib" path="batik-bridge.jar"/>
+	<classpathentry kind="lib" path="batik-codec.jar"/>
+	<classpathentry kind="lib" path="batik-css.jar"/>
+	<classpathentry kind="lib" path="batik-dom.jar"/>
+	<classpathentry kind="lib" path="batik-ext.jar"/>
+	<classpathentry kind="lib" path="batik-extension.jar"/>
+	<classpathentry kind="lib" path="batik-gvt.jar"/>
+	<classpathentry kind="lib" path="batik-parser.jar"/>
+	<classpathentry kind="lib" path="batik-rasterizer.jar"/>
+	<classpathentry kind="lib" path="batik-script.jar"/>
+	<classpathentry kind="lib" path="batik-svg-dom.jar"/>
+	<classpathentry kind="lib" path="batik-svggen.jar"/>
+	<classpathentry kind="lib" path="batik-transcoder.jar"/>
+	<classpathentry kind="lib" path="batik-util.jar"/>
+	<classpathentry kind="lib" path="batik-xml.jar"/>
+	<classpathentry kind="lib" path="batik.jar"/>
+	<classpathentry kind="lib" path="java-image-scaling-0.8.5.jar"/>
+	<classpathentry kind="lib" path="xalan-2.6.0.jar"/>
+	<classpathentry kind="lib" path="xerces_2_5_0.jar"/>
+	<classpathentry kind="lib" path="xml-apis-ext.jar"/>
+	<classpathentry kind="lib" path="xml-apis.jar"/>
+	<classpathentry kind="lib" path="xpp3-1.1.4c.jar"/>
+	<classpathentry kind="lib" path="Filters.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
