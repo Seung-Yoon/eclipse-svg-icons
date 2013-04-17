@@ -57,5 +57,6 @@
 	<classpathentry kind="lib" path="xml-apis.jar"/>
 	<classpathentry kind="lib" path="xpp3-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="Filters.jar"/>
+	<classpathentry kind="lib" path="ant-googlecode-0.0.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

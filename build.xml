@@ -1,7 +1,22 @@
 <!--
 	
 -->
+
+	
 <project name="Eclipse-SVG" default="dist" basedir=".">
+	<taskdef classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask" classpath="ant-googlecode-0.0.3.jar" name="gcupload" />
+	
+	<target name="upload">
+		<gcupload 
+		        username="googleuser" 
+		        password="secretpassword" 
+		        projectname="myproject" 
+		        filename="path/file.name" 
+		        targetfilename="version_0_file.name"
+		        summary="Version 0 of myproject"
+		        labels="Featured, Type-Package, OpSys-All" />
+	</target>
+	
 	<description>
         Rasterizes the SVG icons into formats suitable for runtime use.
     </description>
@@ -57,6 +72,19 @@
      Package the icon set up for distribution.
   -->
 	<target name="dist" depends="render" description="Package up the icon sets">
+		<zip destfile="target/eclipse-svg.zip">
+			<zipfileset dir="target/" prefix="rendered">
+				<include name="org.eclipse.ant.ui/" />
+				<include name="org.eclipse.jdt.ui/" />
+			</zipfileset>
+			<zipfileset dir="src/main/resources/" prefix="svg">
+				<include name="**/*.svg" />
+			</zipfileset>
+			<zipfileset dir=".">
+				<include name="LICENSE.txt" />
+				<include name="README.txt" />
+			</zipfileset>
+		</zip>
 	</target>
 
 	<!-- Clean up the icons and classes -->

@@ -243,12 +243,22 @@ public class RasterizerUtil {
 		RasterizerUtil raster = new RasterizerUtil();
 		
 		File mavenTargetDir = new File("target/");
+		
+		// Ant
 		File antUi = new File("src/main/resources/org.eclipse.ant.ui/icons/full/");
 		
 		File antUiOutput = new File(mavenTargetDir, "org.eclipse.ant.ui");
 			antUiOutput.mkdirs();
 		
 		walkIconDir(raster, "org.eclipse.ant.ui", antUi, antUiOutput);
+		
+		// JDT
+		File jdtUi = new File("src/main/resources/org.eclipse.jdt.ui/icons/full/");
+		
+		File jdtUiOutput = new File(mavenTargetDir, "org.eclipse.jdt.ui");
+		jdtUiOutput.mkdirs();
+	
+		walkIconDir(raster, "org.eclipse.jdt.ui", jdtUi, jdtUiOutput);
 		
 		raster.rasterize();
 	}

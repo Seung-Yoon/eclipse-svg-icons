@@ -1,0 +1,1 @@
+SVG Icons for Eclipse
