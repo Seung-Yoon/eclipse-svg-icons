@@ -76,6 +76,7 @@
 			<zipfileset dir="target/" prefix="rendered">
 				<include name="org.eclipse.ant.ui/" />
 				<include name="org.eclipse.jdt.ui/" />
+				<include name="org.eclipse.ui/" />
 			</zipfileset>
 			<zipfileset dir="src/main/resources/" prefix="svg">
 				<include name="**/*.svg" />

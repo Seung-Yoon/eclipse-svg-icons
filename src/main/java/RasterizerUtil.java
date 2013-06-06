@@ -259,6 +259,15 @@ public class RasterizerUtil {
 		jdtUiOutput.mkdirs();
 	
 		walkIconDir(raster, "org.eclipse.jdt.ui", jdtUi, jdtUiOutput);
+
+
+		// Core UI
+		File coreUi = new File("src/main/resources/org.eclipse.ui/icons/full/");
+		
+		File coreUiOutput = new File(mavenTargetDir, "org.eclipse.ui");
+		coreUiOutput.mkdirs();
+	
+		walkIconDir(raster, "org.eclipse.ui", coreUi, coreUiOutput);
 		
 		raster.rasterize();
 	}
