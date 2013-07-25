@@ -4734,7 +4734,7 @@
        id="g4926">
       <path
          transform="translate(-0.12500001,1036.331)"
-         d="m 14.75,8.1875 a 6.625,6.625 0 1 1 -13.25,0 6.625,6.625 0 1 1 13.25,0 z"
+         d="m 14.75,8.1875 c 0,3.658886 -2.966114,6.625 -6.625,6.625 -3.6588865,0 -6.625,-2.966114 -6.625,-6.625 0,-3.6588865 2.9661135,-6.625 6.625,-6.625 3.658886,0 6.625,2.9661135 6.625,6.625 z"
          sodipodi:ry="6.625"
          sodipodi:rx="6.625"
          sodipodi:cy="8.1875"
@@ -4743,14 +4743,14 @@
          style="color:#000000;fill:#5a5194;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.44999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <rect
-         y="1042.9559"
+         y="1042.6747"
          x="0.46875"
          height="1.09375"
          width="15.03125"
          id="rect4882"
          style="color:#000000;fill:#7386ef;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.44999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <rect
-         y="1044.9247"
+         y="1045.0184"
          x="0.46875"
          height="1.09375"
          width="15.03125"

@@ -4942,19 +4942,19 @@
        id="linearGradient8163-2"
        gradientUnits="userSpaceOnUse"
        x1="388.63736"
-       y1="472.53802"
+       y1="470.63007"
        x2="388.63736"
-       y2="462.38031" />
+       y2="465.52719" />
     <linearGradient
        id="linearGradient10798-1-9-3-7-1-15-1-7-6-1">
       <stop
-         style="stop-color:#9e514f;stop-opacity:1;"
+         style="stop-color:#e17673;stop-opacity:1;"
          offset="0"
          id="stop10800-5-2-1-8-2-8-1-7-3-7" />
       <stop
          id="stop10806-6-8-5-3-2-95-0-5-4-8"
          offset="0.5"
-         style="stop-color:#e01b24;stop-opacity:1;" />
+         style="stop-color:#d04046;stop-opacity:1;" />
       <stop
          style="stop-color:#e17673;stop-opacity:1;"
          offset="1"
@@ -4992,16 +4992,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.828427"
-     inkscape:cx="72.979484"
-     inkscape:cy="9.7833171"
+     inkscape:zoom="31.999999"
+     inkscape:cx="5.2059088"
+     inkscape:cy="5.7058525"
      inkscape:document-units="px"
      inkscape:current-layer="g8159"
      showgrid="false"
      inkscape:window-width="1171"
      inkscape:window-height="959"
-     inkscape:window-x="1154"
-     inkscape:window-y="575"
+     inkscape:window-x="1145"
+     inkscape:window-y="700"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -5029,7 +5029,7 @@
        transform="translate(-8.2201163,-12.904699)">
       <path
          sodipodi:type="arc"
-         style="fill:url(#linearGradient8163-2);fill-opacity:1;stroke:#9f362f;stroke-width:1.97452511000000008;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+         style="fill:url(#linearGradient8163-2);fill-opacity:1;stroke:#c93e35;stroke-width:1.97452511000000008;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
          id="path10796-2-6-0"
          sodipodi:cx="388.125"
          sodipodi:cy="468.23718"
