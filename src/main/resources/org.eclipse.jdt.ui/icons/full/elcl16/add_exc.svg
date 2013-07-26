@@ -4401,7 +4401,7 @@
          id="stop5587-3" />
     </linearGradient>
     <linearGradient
-       gradientTransform="matrix(1.7708731,0,0,1.7708731,4.5339188,1030.7811)"
+       gradientTransform="matrix(1.8479968,0,0,1.8479968,4.3881033,1029.8624)"
        y2="9.1435204"
        x2="2.03125"
        y1="6.9396911"
@@ -4411,7 +4411,7 @@
        xlink:href="#linearGradient5591-4"
        inkscape:collect="always" />
     <linearGradient
-       gradientTransform="matrix(1.7708731,0,0,1.7708731,4.5339188,1030.7811)"
+       gradientTransform="matrix(1.8479968,0,0,1.8479968,4.3881033,1029.8624)"
        y2="4.671875"
        x2="2.03125"
        y1="9.1435204"
@@ -4428,19 +4428,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="2.5702614"
-     inkscape:cy="2.1522437"
+     inkscape:zoom="32.000001"
+     inkscape:cx="9.0247213"
+     inkscape:cy="7.1700733"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1241"
      inkscape:window-height="814"
      inkscape:window-x="1221"
      inkscape:window-y="178"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3971" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -4449,7 +4453,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4460,8 +4464,8 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <path
-       style="fill:url(#linearGradient5618);fill-opacity:1;stroke:url(#linearGradient5620);stroke-width:0.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 6.1941121,1039.3587 3.6524256,0 0,3.4311 3.5417463,0 0,3.6524 -3.7077657,0 0,3.5972 -3.4864062,0 0,-3.5972 -3.6524256,0 0,-3.597 3.5970858,0 z"
+       style="fill:url(#linearGradient5618);fill-opacity:1;stroke:url(#linearGradient5620);stroke-width:0.83484107;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 6.1206005,1038.8137 3.8114935,0 0,3.5806 3.695994,0 0,3.8114 -3.8692437,0 0,3.7539 -3.6382438,0 0,-3.7539 -3.8114934,0 0,-3.7536 3.7537436,0 z"
        id="path5581"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccc" />
