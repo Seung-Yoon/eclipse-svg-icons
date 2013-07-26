@@ -1,25 +1,25 @@
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
 
-import org.apache.batik.transcoder.ErrorHandler;
-import org.apache.batik.transcoder.TranscoderException;
-import org.apache.batik.transcoder.TranscoderInput;
-import org.apache.batik.transcoder.TranscoderOutput;
-import org.apache.batik.transcoder.image.PNGTranscoder;
-
 import com.jhlabs.image.GrayscaleFilter;
 import com.jhlabs.image.HSBAdjustFilter;
+import com.kitfox.svg.SVGDiagram;
+import com.kitfox.svg.SVGException;
+import com.kitfox.svg.SVGUniverse;
 import com.mortennobel.imagescaling.ResampleFilters;
 import com.mortennobel.imagescaling.ResampleOp;
 
@@ -104,26 +104,37 @@ public class RasterizerUtil {
             int[] sizes = dir.sizes;
 
             for (int size : sizes) {
-                File outputFile = new File(dir.outputPath, dir.nameBase + size
-                        + PNG);
 
                 // Render to SVG
                 // TODO do this entirely in memory instead of writing to a file
+                BufferedImage read;
                 try {
                     FileInputStream fileInputStream = new FileInputStream(dir.inputPath);
-                    FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
-                    System.out.println("Rasterizing: " + outputFile.getName()
-                            + " at " + size + "x" + size);
-                    renderIcon(size, size, fileInputStream, fileOutputStream);
+                    read = renderIcon(size, size, fileInputStream);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     continue;
-                }
+                } catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+                    continue;
+				} catch (SVGException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+                    continue;
+				}
 
-                // Post process the raster output
+                // Write the image and post process versions
                 try {
-                    BufferedImage read = ImageIO.read(outputFile);
+                	// Write the base output file
+                    File outputFile = new File(dir.outputPath, dir.nameBase + size
+                            + ".png");
 
+                    System.out.println("Rasterizing: " + outputFile.getName()
+                            + " at " + size + "x" + size);
+                    ImageIO.write(read, PNG, outputFile);
+                    
+                    // Write the desaturated output file
                     GrayscaleFilter grayFilter = new GrayscaleFilter();
 
                     HSBAdjustFilter desaturator = new HSBAdjustFilter();
@@ -184,42 +195,33 @@ public class RasterizerUtil {
      * @param height
      * @param input
      * @param stream
+     * @throws IOException 
+     * @throws SVGException 
      */
-    public static void renderIcon(int width, int height, InputStream input,
-            OutputStream stream) {
-        PNGTranscoder t = new PNGTranscoder();
-        t.addTranscodingHint(PNGTranscoder.KEY_WIDTH, new Float(width));
-        t.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, new Float(height));
-
-        t.setErrorHandler(new ErrorHandler() {
-            public void warning(TranscoderException arg0)
-                    throws TranscoderException {
-                System.err.println("WARN: " + arg0.getMessage());
-            }
-
-            public void fatalError(TranscoderException arg0)
-                    throws TranscoderException {
-                System.err.println("FATAL: " + arg0.getMessage());
-            }
-
-            public void error(TranscoderException arg0)
-                    throws TranscoderException {
-                System.err.println("ERROR: " + arg0.getMessage());
-            }
-        });
-
-        TranscoderInput tinput = new TranscoderInput(input);
-        TranscoderOutput output = new TranscoderOutput(stream);
-
-        try {
-            t.transcode(tinput, output);
-
-            stream.close();
-            input.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-        }
+    public static BufferedImage renderIcon(int width, int height, InputStream input) throws IOException, SVGException {
+    	SVGUniverse univ = new SVGUniverse();
+    	
+		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g = image.createGraphics();
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		
+		URI loadSVG = univ.loadSVG(input, "theme");
+		
+	    SVGDiagram diagram = univ.getDiagram(loadSVG);
+	    
+	    final Rectangle2D.Double rect = new Rectangle2D.Double();
+	    diagram.getViewRect(rect);
+	    
+	    AffineTransform scaleXform = new AffineTransform();
+	    scaleXform.setToScale(width / rect.width, height / rect.height);
+	    AffineTransform oldXform = g.getTransform();
+	    g.transform(scaleXform);
+	    
+	    diagram.render(g);
+		
+		g.dispose();
+	
+        return image;
     }
 
     /**
@@ -293,6 +295,14 @@ public class RasterizerUtil {
         coreUiOutput.mkdirs();
 
         walkIconDir(raster, "org.eclipse.ui", coreUi, coreUiOutput);
+        
+        // Debug UI
+        File debugUi = new File("src/main/resources/org.eclipse.debug.ui/full/");
+
+        File debugUiOutput = new File(mavenTargetDir, "org.eclipse.debug.ui");
+        debugUiOutput.mkdirs();
+
+        walkIconDir(raster, "org.eclipse.debug.ui", debugUi, debugUiOutput);
 
         raster.rasterize();
     }

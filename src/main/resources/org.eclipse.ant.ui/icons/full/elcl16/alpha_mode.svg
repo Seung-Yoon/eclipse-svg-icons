@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Sort Alphabetically.svg">
+   sodipodi:docname="alpha_mode.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -4210,12 +4210,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="7.1175134"
-     inkscape:cy="0.85901507"
+     inkscape:zoom="31.999999"
+     inkscape:cx="10.231149"
+     inkscape:cy="5.1577731"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1184"
      inkscape:window-height="961"
      inkscape:window-x="1306"
@@ -4229,7 +4229,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
