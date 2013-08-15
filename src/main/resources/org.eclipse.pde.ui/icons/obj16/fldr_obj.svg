@@ -4506,9 +4506,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627417"
-     inkscape:cx="6.8434617"
-     inkscape:cy="8.8132794"
+     inkscape:zoom="32"
+     inkscape:cx="14.084182"
+     inkscape:cy="8.8642539"
      inkscape:document-units="px"
      inkscape:current-layer="g13862"
      showgrid="true"
@@ -4558,7 +4558,7 @@
            ry="2.625" />
         <path
            style="fill:url(#linearGradient4933);fill-opacity:1;stroke:url(#linearGradient4935);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0"
-           d="m 462.77563,373.22885 29.11636,0 c 1.45425,0 2.625,1.17075 2.625,2.625 l 0,18.76896 c 0,1.45425 -1.17412,2.52598 -2.625,2.625 l -29.11636,1.98708 c -1.45088,0.099 -2.625,-1.17075 -2.625,-2.625 l 0,-20.75604 c 0,-1.45425 1.17075,-2.625 2.625,-2.625 z"
+           d="m 462.77563,373.22885 29.11636,0 c 1.45425,0 2.625,1.17075 2.625,2.625 l 0,12.7131 c 0,1.45425 -1.22324,2.23779 -2.625,2.625 l -29.11636,8.04294 c -1.40176,0.38721 -2.625,-1.17075 -2.625,-2.625 l 0,-20.75604 c 0,-1.45425 1.17075,-2.625 2.625,-2.625 z"
            id="rect13693"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="sssssssss" />
@@ -4571,20 +4571,20 @@
            id="g4914"
            mask="url(#mask4917)">
           <rect
-             transform="matrix(1,0,-0.70828043,0.70593118,0,0)"
+             transform="matrix(1,0,-0.70828043,0.70593118,4.9445873e-7,0)"
              ry="3.7184925"
              rx="2.625"
              y="542.8974"
              x="860.68469"
              height="22.649353"
-             width="30.899641"
+             width="24.877882"
              id="rect13693-2-2"
              style="opacity:0.5;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.38039374;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;filter:url(#filter4929)" />
         </g>
         <rect
            style="fill:url(#linearGradient4776);fill-opacity:1;stroke:url(#linearGradient4778);stroke-width:2.38039374;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
            id="rect13693-2"
-           width="30.899639"
+           width="30.096739"
            height="22.649353"
            x="860.68469"
            y="542.8974"
