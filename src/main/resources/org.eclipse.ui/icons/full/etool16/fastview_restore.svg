@@ -4962,19 +4962,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627417"
-     inkscape:cx="-10.459853"
-     inkscape:cy="7.1466973"
+     inkscape:zoom="64"
+     inkscape:cx="5.8017967"
+     inkscape:cy="7.2513625"
      inkscape:document-units="px"
-     inkscape:current-layer="g4908"
-     showgrid="false"
+     inkscape:current-layer="g4948"
+     showgrid="true"
      inkscape:window-width="1652"
      inkscape:window-height="1252"
      inkscape:window-x="827"
      inkscape:window-y="130"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4037" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -4983,7 +4987,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4999,7 +5003,7 @@
       <g
          style="display:inline"
          id="g4948"
-         transform="translate(17.766058,-1.59099)">
+         transform="translate(18.156683,-1.59099)">
         <path
            sodipodi:nodetypes="cccccccccccccccccc"
            inkscape:connector-curvature="0"
@@ -5009,7 +5013,7 @@
         <path
            sodipodi:nodetypes="cccccccccccccccccc"
            inkscape:connector-curvature="0"
-           d="m -31.739881,1045.1535 0,0.625 0,3.8125 0,0.625 0.625,0 4.71875,0 0.625,0 0,-0.625 0,-3.8125 0,-0.625 -0.625,0 -4.71875,0 z m 1.25,1.8687 3.46875,0 0,1.9438 -3.46875,0 z"
+           d="m -31.818006,1044.966 0,0.6154 0,3.7536 0,0.6154 0.625,0 4.71875,0 0.625,0 0,-0.6154 0,-3.7536 0,-0.6154 -0.625,0 -4.71875,0 z m 1.25,1.8399 3.46875,0 0,1.9138 -3.46875,0 z"
            style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#706860;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.25;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
            id="path4951" />
       </g>
