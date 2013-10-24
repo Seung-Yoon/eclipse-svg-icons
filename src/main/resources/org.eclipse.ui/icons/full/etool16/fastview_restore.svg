@@ -4962,9 +4962,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="64"
-     inkscape:cx="5.8017967"
-     inkscape:cy="7.2513625"
+     inkscape:zoom="45.254834"
+     inkscape:cx="10.976842"
+     inkscape:cy="9.1872968"
      inkscape:document-units="px"
      inkscape:current-layer="g4948"
      showgrid="true"
@@ -4974,7 +4974,8 @@
      inkscape:window-y="130"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid4037" />
@@ -5005,15 +5006,15 @@
          id="g4948"
          transform="translate(18.156683,-1.59099)">
         <path
-           sodipodi:nodetypes="cccccccccccccccccc"
+           sodipodi:nodetypes="cccccccccc"
            inkscape:connector-curvature="0"
-           d="m -28.823065,1041.9716 0,0.625 0,3.8125 0,0.625 0.625,0 4.71875,0 0.625,0 0,-0.625 0,-3.8125 0,-0.625 -0.625,0 -4.71875,0 z m 1.25,1.8687 3.46875,0 0,1.9438 -3.46875,0 z"
+           d="m -29.844183,1041.9532 0,5 6,0 0,-5 z m 0.994582,2.0165 4.005418,-0.017 0,2 -4,0 z"
            style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#706860;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.25;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-           id="path4939" />
+           id="path4951-1" />
         <path
-           sodipodi:nodetypes="cccccccccccccccccc"
+           sodipodi:nodetypes="cccccccccc"
            inkscape:connector-curvature="0"
-           d="m -31.818006,1044.966 0,0.6154 0,3.7536 0,0.6154 0.625,0 4.71875,0 0.625,0 0,-0.6154 0,-3.7536 0,-0.6154 -0.625,0 -4.71875,0 z m 1.25,1.8399 3.46875,0 0,1.9138 -3.46875,0 z"
+           d="m -31.844183,1044.9532 0,5 6,0 0,-5 z m 1,2 4,0 0,2 -4,0 z"
            style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#706860;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.25;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
            id="path4951" />
       </g>
