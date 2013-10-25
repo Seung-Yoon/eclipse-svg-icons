@@ -10,8 +10,8 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="16"
-   height="16"
+   width="20"
+   height="20"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
@@ -81,10 +81,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="g8159"
      showgrid="true"
-     inkscape:window-width="973"
-     inkscape:window-height="732"
-     inkscape:window-x="1203"
-     inkscape:window-y="708"
+     inkscape:window-width="1183"
+     inkscape:window-height="955"
+     inkscape:window-x="976"
+     inkscape:window-y="546"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -114,14 +114,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline"
-     transform="translate(0,-1036.3622)">
+     transform="translate(0,-1032.3622)">
     <g
        style="display:inline"
        id="g8159"
        transform="translate(-8.2201163,-12.904699)">
       <g
          id="g8579"
-         transform="matrix(1.0304739,0,0,1.0304739,-38.931405,-22.562831)">
+         transform="matrix(1.0304739,0,0,1.0304739,-36.147172,-25.214481)">
         <path
            transform="matrix(1.247029,0,0,1.247029,20.641113,1050.8233)"
            d="m 31.413783,-2 c 0,2.98994957 -2.423833,5.4137826 -5.413783,5.4137826 -2.98995,0 -5.413783,-2.42383303 -5.413783,-5.4137826 0,-2.9899496 2.423833,-5.4137826 5.413783,-5.4137826 2.98995,0 5.413783,2.423833 5.413783,5.4137826 z"

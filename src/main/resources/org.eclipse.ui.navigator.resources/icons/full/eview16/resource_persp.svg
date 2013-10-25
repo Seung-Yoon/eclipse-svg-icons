@@ -14,8 +14,8 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="2.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="resource_persp.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -4295,17 +4295,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="9.1720802"
-     inkscape:cy="-0.62916904"
+     inkscape:zoom="32"
+     inkscape:cx="8.2343958"
+     inkscape:cy="6.5866223"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1375"
-     inkscape:window-height="876"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     showgrid="true"
+     inkscape:window-width="1569"
+     inkscape:window-height="1111"
+     inkscape:window-x="989"
+     inkscape:window-y="460"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3928" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -4314,7 +4319,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4325,7 +4330,7 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <g
-       transform="matrix(0.27903303,0,0,0.27903303,-129.51159,939.94639)"
+       transform="matrix(0.27903303,0,0,0.27903303,-129.79284,940.66514)"
        style="display:inline"
        id="g13862">
       <path

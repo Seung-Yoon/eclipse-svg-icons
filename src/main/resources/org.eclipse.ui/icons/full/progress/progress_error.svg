@@ -311,7 +311,8 @@
        x1="8.0803566"
        y1="17.936087"
        x2="8.0803566"
-       y2="14.813071" />
+       y2="14.813071"
+       gradientTransform="matrix(1.1129032,0,0,1,-0.6602823,1036.3622)" />
     <linearGradient
        id="linearGradient3797-2">
       <stop
@@ -5313,7 +5314,7 @@
      inkscape:cx="7.8083738"
      inkscape:cy="4.2468998"
      inkscape:document-units="px"
-     inkscape:current-layer="g3969"
+     inkscape:current-layer="g3819"
      showgrid="true"
      inkscape:window-width="1056"
      inkscape:window-height="796"
@@ -5337,7 +5338,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5444,16 +5445,10 @@
         <rect
            style="fill:url(#linearGradient3829-3);fill-opacity:1;stroke:none"
            id="rect3795"
-           width="8.3035707"
+           width="9.2410707"
            height="5.2232132"
            x="5.8482141"
-           y="14.883928"
-           transform="translate(0,1036.3622)" />
-        <path
-           style="fill:none;stroke:#4ea54c;stroke-width:1.0107801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 14.642857,1051.257 0,5.2908"
-           id="path3807"
-           inkscape:connector-curvature="0" />
+           y="1051.2461" />
       </g>
       <path
          sodipodi:type="arc"
@@ -5463,7 +5458,7 @@
          sodipodi:cy="10.642858"
          sodipodi:rx="4.4196429"
          sodipodi:ry="4.4196429"
-         d="m 15.357143,10.642858 a 4.4196429,4.4196429 0 1 1 -8.8392859,0 4.4196429,4.4196429 0 1 1 8.8392859,0 z"
+         d="m 15.357143,10.642858 c 0,2.440901 -1.978742,4.419642 -4.419643,4.419642 -2.4409014,0 -4.4196429,-1.978741 -4.4196429,-4.419642 0,-2.4409018 1.9787415,-4.4196434 4.4196429,-4.4196434 2.440901,0 4.419643,1.9787416 4.419643,4.4196434 z"
          transform="matrix(1.1161616,0,0,1.1161616,-0.7571248,1035.9072)" />
       <g
          style="display:inline"

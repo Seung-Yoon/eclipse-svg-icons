@@ -4484,7 +4484,7 @@
        xlink:href="#linearGradient4817-9"
        id="linearGradient4002-1"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(5.25,1050.4872)"
+       gradientTransform="translate(5.1921478,1050.4872)"
        x1="11.436646"
        y1="9.6309509"
        x2="14.526019"
@@ -4510,8 +4510,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="45.254834"
-     inkscape:cx="5.0565866"
-     inkscape:cy="-1.9355127"
+     inkscape:cx="8.5921205"
+     inkscape:cy="7.7872055"
      inkscape:document-units="px"
      inkscape:current-layer="g3997"
      showgrid="true"
@@ -4553,8 +4553,8 @@
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="path4005"
-         d="m 13.249146,1066.0121 3.491339,-7.0379 3.535534,7.0379 -2.010835,0 -2.496971,-5.0271"
-         style="fill:url(#linearGradient4002-1);fill-opacity:1;stroke:#095799;stroke-width:0.6545233;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+         d="m 13.191294,1066.0121 3.491339,-7.0379 3.535534,7.0379 -2.010835,0 -2.496971,-5.0271"
+         style="fill:url(#linearGradient4002-1);fill-opacity:1;stroke:#095799;stroke-width:0.65452331;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <rect
          y="1065.5039"
          x="12.417285"

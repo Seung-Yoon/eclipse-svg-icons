@@ -311,7 +311,8 @@
        x1="8.0803566"
        y1="17.936087"
        x2="8.0803566"
-       y2="14.813071" />
+       y2="14.813071"
+       gradientTransform="matrix(1.1182796,0,0,1,-0.69172431,1036.3622)" />
     <linearGradient
        id="linearGradient3797-2">
       <stop
@@ -339,7 +340,7 @@
      inkscape:cx="7.8083738"
      inkscape:cy="4.2468998"
      inkscape:document-units="px"
-     inkscape:current-layer="g3969"
+     inkscape:current-layer="g3819"
      showgrid="true"
      inkscape:window-width="1056"
      inkscape:window-height="796"
@@ -363,7 +364,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -470,16 +471,10 @@
         <rect
            style="fill:url(#linearGradient3829-3);fill-opacity:1;stroke:none"
            id="rect3795"
-           width="8.3035707"
+           width="9.2857132"
            height="5.2232132"
            x="5.8482141"
-           y="14.883928"
-           transform="translate(0,1036.3622)" />
-        <path
-           style="fill:none;stroke:#4ea54c;stroke-width:1.0107801px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 14.642857,1051.257 0,5.2908"
-           id="path3807"
-           inkscape:connector-curvature="0" />
+           y="1051.2461" />
       </g>
     </g>
   </g>
