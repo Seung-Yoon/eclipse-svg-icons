@@ -47,5 +47,11 @@
 	<classpathentry kind="lib" path="xpp3-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="Filters.jar"/>
 	<classpathentry kind="lib" path="ant-googlecode-0.0.3.jar"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

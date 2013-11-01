@@ -2,15 +2,15 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -23,11 +23,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.imageio.ImageIO;
 
+import org.apache.batik.dom.svg.SAXSVGDocumentFactory;
 import org.apache.batik.transcoder.ErrorHandler;
 import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.image.PNGTranscoder;
+import org.apache.batik.util.XMLResourceDescriptor;
+import org.w3c.dom.Element;
+import org.w3c.dom.svg.SVGDocument;
 
 import com.jhlabs.image.GrayscaleFilter;
 import com.jhlabs.image.HSBAdjustFilter;
@@ -35,10 +39,8 @@ import com.mortennobel.imagescaling.ResampleFilters;
 import com.mortennobel.imagescaling.ResampleOp;
 
 /**
- * <p>
- * A hastily written utility that rasterizes the Eclipse SVG icon set into
- * raster PNG images that can be readily used in an Eclipse product.
- * </p>
+ * <p>A hastily written utility that rasterizes the Eclipse SVG icon set into
+ * raster PNG images that can be readily used in an Eclipse product.</p>
  * 
  * @author Tony McCrary (tmccrary@l33tlabs.com)
  * 
@@ -48,10 +50,8 @@ public class RasterizerUtil {
 	private static final String PNG = "PNG";
 
 	/**
-	 * <p>
-	 * IconDef is a definition instance used to define an icon to rasterize,
-	 * where to put it and the dimensions to render it at.
-	 * </p>
+	 * <p>IconDef is used to define an icon to rasterize,
+	 * where to put it and the dimensions to render it at.</p>
 	 */
 	class IconDef {
 
@@ -72,19 +72,24 @@ public class RasterizerUtil {
 		/** The path to the 128x128 raster variant of this icon. */
 		File galleryRasterPath;
 
+		/** The path to a disabled version of the icon (gets desaturated). */
+		private File disabledPath;
+
 		/**
 		 * 
 		 * @param nameBase
 		 * @param inputPath
 		 * @param outputPath
+		 * @param disabledPath
 		 * @param sizes
 		 */
 		public IconDef(String nameBase, File inputPath, File outputPath,
-				int[] sizes) {
+				File disabledPath, int[] sizes) {
 			this.nameBase = nameBase;
 			this.sizes = sizes;
 			this.inputPath = inputPath;
 			this.outputPath = outputPath;
+			this.disabledPath = disabledPath;
 		}
 	}
 
@@ -92,7 +97,7 @@ public class RasterizerUtil {
 	private List<IconDef> icons;
 
 	/** A list of the output render sizes. */
-	private static final int[] SIZES = new int[] { 128, 256, 512, 1024 };
+	private static final int[] SIZES = new int[] { 128 };
 
 	/** The pool used to render multiple icons concurrently. */
 	private ExecutorService execPool;
@@ -111,6 +116,10 @@ public class RasterizerUtil {
 	 * o.e.jd.ui, etc).
 	 */
 	Map<String, List<IconDef>> galleryIconSets;
+
+	/** */
+	List<IconDef> failedIcons = Collections
+			.synchronizedList(new ArrayList<IconDef>(5));
 
 	/**
 	 * @param threads
@@ -141,11 +150,13 @@ public class RasterizerUtil {
 	 * @param sizes
 	 * @return
 	 */
-	public IconDef createIcon(File input, File outputPath, int[] sizes) {
+	public IconDef createIcon(File input, File outputPath, File disabledPath,
+			int[] sizes) {
 		String name = input.getName();
 		String[] split = name.split("\\.(?=[^\\.]+$)");
 
-		IconDef def = new IconDef(split[0], input, outputPath, sizes);
+		IconDef def = new IconDef(split[0], input, outputPath, disabledPath,
+				sizes);
 
 		icons.add(def);
 
@@ -154,13 +165,32 @@ public class RasterizerUtil {
 
 	/**
 	 * Generates a set of raster images from the input SVG vector image.
+	 * TODO break this up
 	 * 
 	 * @param icon
 	 *            the icon to render
 	 */
 	public void rasterize(IconDef icon) {
-		if (!icon.outputPath.exists()) {
+		if (icon == null) {
+			System.err.println("Null icon definition, skipping.");
+		}
+
+		if (icon.inputPath == null) {
+			System.err.println("Null icon input path, skipping: "
+					+ icon.nameBase);
+		}
+
+		if (!icon.inputPath.exists()) {
+			System.err.println("Input path specified does not exist, skipping: "
+							+ icon.nameBase);
+		}
+
+		if (icon.outputPath != null && !icon.outputPath.exists()) {
 			icon.outputPath.mkdirs();
+		}
+
+		if (icon.disabledPath != null && !icon.disabledPath.exists()) {
+			icon.disabledPath.mkdirs();
 		}
 
 		int[] sizes = icon.sizes;
@@ -168,137 +198,159 @@ public class RasterizerUtil {
 		GrayscaleFilter grayFilter = new GrayscaleFilter();
 
 		HSBAdjustFilter desaturator = new HSBAdjustFilter();
-		desaturator.setBFactor(0.3f);
+		desaturator.setSFactor(0.0f);
+
+		// Load the document and find out the native height/width
+		// We reuse the document later for rasterization
+		SVGDocument svgDocument = null;
+		try {
+			FileInputStream iconDocumentStream = new FileInputStream(
+					icon.inputPath);
+
+			String parser = XMLResourceDescriptor.getXMLParserClassName();
+			SAXSVGDocumentFactory f = new SAXSVGDocumentFactory(parser);
+			svgDocument = (SVGDocument) f.createDocument(icon.nameBase,
+					iconDocumentStream);
+		} catch (Exception e3) {
+			// TODO Auto-generated catch block
+			e3.printStackTrace();
+			failedIcons.add(icon);
+			return;
+		}
+
+		Element svgDocumentNode = svgDocument.getDocumentElement();
+		String nativeWidthStr = svgDocumentNode.getAttribute("width");
+		String nativeHeightStr = svgDocumentNode.getAttribute("width");
+
+		int nativeWidth = Integer.parseInt(nativeWidthStr);
+		int nativeHeight = Integer.parseInt(nativeHeightStr);
+
+		int doubleWidth = nativeWidth * 2;
+		int doubleHeight = nativeHeight * 2;
+
+		int quadWidth = nativeWidth * 4;
+		int quadHeight = nativeHeight * 4;
 
 		// Can we just make these static field values?
 		// Will that work with the graphics subsystem?
-		ResampleOp resampleOp16 = new ResampleOp(16, 16);
-		resampleOp16.setFilter(ResampleFilters.getLanczos3Filter());
+		ResampleOp resampleOpNative = new ResampleOp(nativeWidth, nativeHeight);
+		resampleOpNative.setFilter(ResampleFilters.getLanczos3Filter());
 		// resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
-		resampleOp16.setNumberOfThreads(2);
-		
-		ResampleOp resampleOp32 = new ResampleOp(32, 32);
-		resampleOp32.setFilter(ResampleFilters.getLanczos3Filter());
-		// resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
-		resampleOp32.setNumberOfThreads(2);
-		
-		ResampleOp resampleOp48 = new ResampleOp(48, 48);
-		resampleOp48.setFilter(ResampleFilters.getLanczos3Filter());
-		// resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
-		resampleOp48.setNumberOfThreads(2);
-		
-		ResampleOp resampleOp64 = new ResampleOp(64, 64);
-		resampleOp64.setFilter(ResampleFilters.getLanczos3Filter());
-		// resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
-		resampleOp64.setNumberOfThreads(2);
-		
-		for (int size : sizes) {
-			File outputFile = new File(icon.outputPath, icon.nameBase + "-"
-					+ size + ".png");
+		resampleOpNative.setNumberOfThreads(2);
 
-			// We use the 128 for various operations when rendering the icon
-			// galleries
-			if (size == 128) {
-				icon.galleryRasterPath = outputFile;
+		ResampleOp resampleOpDouble = new ResampleOp(doubleWidth, doubleHeight);
+		resampleOpDouble.setFilter(ResampleFilters.getLanczos3Filter());
+		// resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
+		resampleOpDouble.setNumberOfThreads(2);
+
+		// Guesstimate the PNG size in memory, BAOS will enlarge if necessary.
+		int outputInitSize = quadWidth * quadHeight * 4 + 1024;
+		ByteArrayOutputStream iconOutput = new ByteArrayOutputStream(
+				outputInitSize);
+
+		// Render to SVG
+		// TODO clean this up so it's less spaghetti-ish (use exceptions
+		// properly, etc)
+		try {
+			System.out.println(Thread.currentThread().getName() + " "
+					+ " Rasterizing: " + icon.nameBase + ".png at " + quadWidth
+					+ "x" + quadHeight);
+			boolean success = renderIcon(quadWidth, quadHeight,
+					new TranscoderInput(svgDocument), iconOutput);
+			if (!success) {
+				System.out.println("Failed to render icon: " + icon.nameBase
+						+ ".png, skipping.");
+				failedIcons.add(icon);
+				return;
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			failedIcons.add(icon);
+			return;
+		}
 
-			// Render to SVG
-			try {
-				FileInputStream fileInputStream = new FileInputStream(
-						icon.inputPath);
-				FileOutputStream fileOutputStream = new FileOutputStream(
-						outputFile);
-				System.out.println(Thread.currentThread().getName() + " "
-						+ " Rasterizing: " + outputFile.getName() + " at "
-						+ size + "x" + size);
-				renderIcon(size, size, fileInputStream, fileOutputStream);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-				continue;
-			}
+		// Generate a buffered image from Batik's png output
+		ByteArrayInputStream imageInputStream = new ByteArrayInputStream(
+				iconOutput.toByteArray());
+		BufferedImage read = null;
+		try {
+			read = ImageIO.read(imageInputStream);
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+			failedIcons.add(icon);
+			return;
+		}
 
-			// Read back the image rasterized with batik
-			// TODO do this entirely in memory instead of writing to a file
-			BufferedImage read = null;
-			try {
-				read = ImageIO.read(outputFile);
-			} catch (IOException e2) {
-				// TODO Auto-generated catch block
-				e2.printStackTrace();
-			}
+		// Post process the raster output
+		// We need a grey version of each icon for disabled states
+		try {
+			ImageIO.write(read, PNG, new File(icon.outputPath, icon.nameBase
+					+ "_4x.png"));
 
-			// Post process the raster output
-			// We need a grey version of each icon for disabled states
-			try {
+			if (icon.disabledPath != null) {
 				BufferedImage desaturated = desaturator.filter(
 						grayFilter.filter(read, null), null);
 
-				ImageIO.write(desaturated, PNG, new File(icon.outputPath,
-						icon.nameBase + size + "-grey.png"));
-
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				ImageIO.write(desaturated, PNG, new File(icon.disabledPath,
+						icon.nameBase + "_4x.png"));
 			}
 
-			try {
-				// Icons lose definition and accuracy when rendered directly 
-				// to <128px res with Batik
-				// Here we resize a 16x,32x,48x,64x images down, which gives better
-				// results
-				if (size == 128) {
-					// Resize and render the 16x16 icon
-					BufferedImage rescaled16 = resampleOp16.filter(read, null);
+			// We use the 128 for various operations when rendering the icon
+			// galleries
+			icon.galleryRasterPath = new File(icon.outputPath, icon.nameBase
+					+ "_4x.png");
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			failedIcons.add(icon);
+			return;
+		}
 
-					ImageIO.write(rescaled16, PNG, new File(icon.outputPath,
-							icon.nameBase + ".png"));
+		try {
+			// Icons lose definition and accuracy when rendered directly
+			// to <128px res with Batik
+			// Here we resize a 16x,32x,48x,64x images down, which gives better
+			// results
+			System.out.println(Thread.currentThread().getName() + " "
+					+ " Rasterizing (Scaling Native): " + icon.nameBase
+					+ ".png at " + nativeWidth + "x" + nativeHeight);
 
-					BufferedImage desaturated16 = desaturator.filter(
-							grayFilter.filter(rescaled16, null), null);
+			// Resize and render the 16x16 icon
+			BufferedImage rescaled16 = resampleOpNative.filter(read, null);
 
-					ImageIO.write(desaturated16, PNG, new File(icon.outputPath,
-							icon.nameBase + "-grey.png"));
+			ImageIO.write(rescaled16, PNG, new File(icon.outputPath,
+					icon.nameBase + ".png"));
 
-					// Resize and render the 32x32 icon
-					BufferedImage rescaled32 = resampleOp32.filter(read, null);
+			if (icon.disabledPath != null) {
+				BufferedImage desaturated16 = desaturator.filter(
+						grayFilter.filter(rescaled16, null), null);
 
-					ImageIO.write(rescaled32, PNG, new File(icon.outputPath,
-							icon.nameBase + "32.png"));
-
-					BufferedImage desaturated32 = desaturator.filter(
-							grayFilter.filter(rescaled32, null), null);
-
-					ImageIO.write(desaturated32, PNG, new File(icon.outputPath,
-							icon.nameBase + "32-grey.png"));
-
-					// Resize and render the 48x48 icon
-					BufferedImage rescaled48 = resampleOp48.filter(read, null);
-
-					ImageIO.write(rescaled48, PNG, new File(icon.outputPath,
-							icon.nameBase + "48.png"));
-
-					BufferedImage desaturated48 = desaturator.filter(
-							grayFilter.filter(rescaled48, null), null);
-
-					ImageIO.write(desaturated48, PNG, new File(icon.outputPath,
-							icon.nameBase + "48-grey.png"));
-
-					// Resize and render the 64x64 icon
-					BufferedImage rescaled64 = resampleOp64.filter(read, null);
-
-					ImageIO.write(rescaled64, PNG, new File(icon.outputPath,
-							icon.nameBase + "64.png"));
-
-					BufferedImage desaturated64 = desaturator.filter(
-							grayFilter.filter(rescaled64, null), null);
-
-					ImageIO.write(desaturated64, PNG, new File(icon.outputPath,
-							icon.nameBase + "64-grey.png"));
-				}
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				ImageIO.write(desaturated16, PNG, new File(icon.disabledPath,
+						icon.nameBase + ".png"));
 			}
+
+			System.out.println(Thread.currentThread().getName() + " "
+					+ " Rasterizing (Scaling Half): " + icon.nameBase
+					+ ".png at " + doubleWidth + "x" + doubleWidth);
+
+			// Resize and render the 32x32 icon
+			BufferedImage rescaled32 = resampleOpDouble.filter(read, null);
+
+			ImageIO.write(rescaled32, PNG, new File(icon.outputPath,
+					icon.nameBase + "_2x.png"));
+
+			if (icon.disabledPath != null) {
+				BufferedImage desaturated32 = desaturator.filter(
+						grayFilter.filter(rescaled32, null), null);
+
+				ImageIO.write(desaturated32, PNG, new File(icon.disabledPath,
+						icon.nameBase + "_2x.png"));
+			}
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			failedIcons.add(icon);
 		}
 	}
 
@@ -359,6 +411,13 @@ public class RasterizerUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+		// Print info about failed render operations, so they can be fixed
+		System.out.println("Failed Icon Count: " + failedIcons.size());
+		for (IconDef icon : failedIcons) {
+			System.out.println("Failed Icon: " + icon.nameBase);
+		}
+
 	}
 
 	/**
@@ -370,8 +429,8 @@ public class RasterizerUtil {
 	 * @param input
 	 * @param stream
 	 */
-	public static void renderIcon(int width, int height, InputStream input,
-			OutputStream stream) {
+	public static boolean renderIcon(int width, int height,
+			TranscoderInput tinput, OutputStream stream) {
 		PNGTranscoder t = new PNGTranscoder();
 		t.addTranscodingHint(PNGTranscoder.KEY_WIDTH, new Float(width));
 		t.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, new Float(height));
@@ -393,17 +452,18 @@ public class RasterizerUtil {
 			}
 		});
 
-		TranscoderInput tinput = new TranscoderInput(input);
 		TranscoderOutput output = new TranscoderOutput(stream);
 
 		try {
 			t.transcode(tinput, output);
 
 			stream.close();
-			input.close();
+			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		} finally {
+
 		}
 	}
 
@@ -435,7 +495,38 @@ public class RasterizerUtil {
 
 				String relativePath = rootUri.relativize(iconUri).getPath();
 				File outputDir = new File(outputBase, relativePath);
-				IconDef createIcon = createIcon(child, outputDir, SIZES);
+				File disabledOutputDir = null;
+
+				File parentFile = child.getParentFile();
+
+				// Determine if/where to put a disabled version of the icon
+				// Eclipse traditionally uses a prefix of d for disabled, e for
+				// enabled
+				// in the folder name
+				if (parentFile != null) {
+					String parentDirName = parentFile.getName();
+					if (parentDirName.startsWith("e")) {
+						StringBuilder builder = new StringBuilder();
+						builder.append("d");
+						builder.append(parentDirName.substring(1,
+								parentDirName.length()));
+						String disabledVariant = builder.toString();
+
+						File setParent = parentFile.getParentFile();
+						for (File disabledFolder : setParent.listFiles()) {
+							if (disabledFolder.getName()
+									.equals(disabledVariant)) {
+								String path = rootUri.relativize(
+										disabledFolder.toURI()).getPath();
+								disabledOutputDir = new File(outputBase, path);
+							}
+						}
+
+					}
+				}
+
+				IconDef createIcon = createIcon(child, outputDir,
+						disabledOutputDir, SIZES);
 
 				// Update the gallery icons sets
 				List<IconDef> list = galleryIconSets.get(rootDir.getName());
@@ -461,14 +552,14 @@ public class RasterizerUtil {
 	 */
 	public void renderGalleries(File targetDir, int iconSize, int width) {
 		// Render each icon set and a master list
-		List<IconDef> uberList = new ArrayList<IconDef>();
+		List<IconDef> masterList = new ArrayList<IconDef>();
 		Map<String, List<IconDef>> iconSets2 = galleryIconSets;
 
 		for (Entry<String, List<IconDef>> entry : iconSets2.entrySet()) {
 			String key = entry.getKey();
 			List<IconDef> value = entry.getValue();
 
-			uberList.addAll(value);
+			masterList.addAll(value);
 
 			System.out.println("Creating gallery for: " + key);
 			renderGallery(targetDir, key, value, iconSize, width, 3);
@@ -476,8 +567,8 @@ public class RasterizerUtil {
 
 		// Render the master image
 		System.out.println("Rendering master icon gallery...");
-		renderUberGallery(targetDir, iconSize, iconSize + width, true);
-		renderUberGallery(targetDir, iconSize, iconSize + width, false);
+		renderMasterGallery(targetDir, iconSize, iconSize + width, true);
+		renderMasterGallery(targetDir, iconSize, iconSize + width, false);
 	}
 
 	/**
@@ -524,7 +615,17 @@ public class RasterizerUtil {
 
 		// Render each icon into the gallery grid
 		for (IconDef def : value) {
+			// Skip failed icons
+			if (failedIcons.contains(def)) {
+				continue;
+			}
+
 			try {
+				if (def.galleryRasterPath == null) {
+					System.err.println("Undefined gallery image for : "
+							+ def.nameBase);
+					continue;
+				}
 				BufferedImage iconImage = ImageIO.read(def.galleryRasterPath);
 				BufferedImage sizedImage = resampleOp.filter(iconImage, null);
 
@@ -539,6 +640,8 @@ public class RasterizerUtil {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.err.println("Error rendering icon for gallery: "
+						+ def.galleryRasterPath.getAbsolutePath());
 				continue;
 			}
 		}
@@ -562,7 +665,7 @@ public class RasterizerUtil {
 	 * @param width
 	 * @param dark
 	 */
-	private void renderUberGallery(File root, int iconSize, int width,
+	private void renderMasterGallery(File root, int iconSize, int width,
 			boolean dark) {
 		int headerHeight = 30;
 		List<BufferedImage> images = new ArrayList<BufferedImage>();
@@ -572,7 +675,6 @@ public class RasterizerUtil {
 				try {
 					set = ImageIO.read(file);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 					continue;
 				}
@@ -595,8 +697,9 @@ public class RasterizerUtil {
 		g.fillRect(0, 0, bi.getWidth(), bi.getHeight());
 
 		g.setColor(Color.BLACK);
-		g.drawString("l33t labs Bling3D SVG Icons for Eclipse - " + iconSize + "x"
-				+ iconSize + " Rendered: " + new Date().toString(), 8, 20);
+		g.drawString("l33t labs Bling3D SVG Icons for Eclipse - Count: "
+				+ counter.get() + " " + iconSize + "x" + iconSize
+				+ " Rendered: " + new Date().toString(), 8, 20);
 
 		int x = 0;
 		int y = 31;
@@ -617,22 +720,34 @@ public class RasterizerUtil {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Rasterize the project's icons and generate galleries for review
 	 * 
-	 * @param args the first argument is an integer for the number of threads
-	 *             used to render the project
+	 * @param args
+	 *            the first argument is an integer for the number of threads
+	 *            used to render the project
 	 */
 	public static void main(String[] args) {
 		int threads = Math.max(1,
 				Runtime.getRuntime().availableProcessors() / 2);
 		if (args.length >= 1) {
-			threads = Integer.parseInt(args[0]);
+			String threadStr = System.getProperty("eclipse.svg.renderthreads");
+			if (threadStr != null) {
+				try {
+					threads = Integer.parseInt(threadStr);
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.out
+							.println("Could not parse thread count, using default thread count");
+				}
+			}
+		} else {
+			threads = (threads + 1) * 2;
 		}
-		
+
 		long totalStartTime = System.currentTimeMillis();
-		
+
 		RasterizerUtil rasterizer = new RasterizerUtil(threads);
 
 		File mavenTargetDir = new File("target/");
@@ -650,8 +765,7 @@ public class RasterizerUtil {
 		rasterizer.rasterizeAll();
 
 		// Account for each output size and the gray icons
-		int fullIconCount = rasterizer.getIconsRendered()
-				* ((SIZES.length + 4) * 2);
+		int fullIconCount = rasterizer.getIconsRendered();
 		System.out.println(fullIconCount + " Icons Rendered, Took: "
 				+ (System.currentTimeMillis() - startTime) + " ms.");
 
@@ -660,11 +774,10 @@ public class RasterizerUtil {
 		startTime = System.currentTimeMillis();
 		System.out.println("Rendering icon galleries...");
 		rasterizer.renderGalleries(mavenTargetDir, 16, 800);
-		rasterizer.renderGalleries(mavenTargetDir, 32, 800);
-		rasterizer.renderGalleries(mavenTargetDir, 128, 800);
+		// rasterizer.renderGalleries(mavenTargetDir, 32, 800);
 		System.out.println("Icon Galleries Rendered, Took: "
 				+ (System.currentTimeMillis() - startTime) + " ms.");
-		
+
 		System.out.println("Rasterization operations completed, Took: "
 				+ (System.currentTimeMillis() - totalStartTime) + " ms.");
 

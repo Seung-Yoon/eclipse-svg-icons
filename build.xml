@@ -62,7 +62,25 @@
 			</fileset>
 		</path>
 
-		<java classname="RasterizerUtil">
+		<java fork="true" maxmemory="1024m" classname="RasterizerUtil">
+			<classpath refid="classpath">
+			</classpath>
+		</java>
+	</target>
+	
+	<!--
+    Print missing icons
+ 	-->
+	<target name="missing" depends="compile" description="Print missing icons (gifs that lack svg versions)">
+
+		<path id="classpath">
+			<pathelement location="${build}" />
+			<fileset dir=".">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+		<java classname="MissingIconSearch">
 			<classpath refid="classpath">
 			</classpath>
 		</java>
@@ -74,17 +92,18 @@
 	<target name="dist" depends="render" description="Package up the icon sets">
 		<zip destfile="target/eclipse-svg.zip">
 			<zipfileset dir="target/" prefix="rendered">
-				<include name="org.eclipse.ant.ui/" />
-				<include name="org.eclipse.jdt.ui/" />
-				<include name="org.eclipse.ui/" />
-				<include name="org.eclipse.debug.ui/" />
+				<include name="eclipse.jdt.ui/" />
+				<include name="eclipse.pde.ui/" />
+				<include name="eclipse.platform/" />
+				<include name="eclipse.platform.debug/" />
+				<include name="eclipse.platform.team/" />
+				<include name="eclipse.platform.ui/" />
 			</zipfileset>
 			<zipfileset dir="src/main/resources/" prefix="svg">
 				<include name="**/*.svg" />
 			</zipfileset>
 			<zipfileset dir=".">
 				<include name="LICENSE.txt" />
-				<include name="README.txt" />
 			</zipfileset>
 		</zip>
 	</target>
