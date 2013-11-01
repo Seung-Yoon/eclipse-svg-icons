@@ -9,6 +9,13 @@ $ ant
 
 from within the project directory.
 
+To view which icons still lack an SVG version, you can run:
+
+$ ant missing
+
+This is print a list of icons where a .gif images exists but no 
+similarly named .svg file.
+
 While the icons should work with any capable SVG editor or viewer, 
 Inkscape is the preferred tool, which is open source and available 
 at: http://inkscape.org/.

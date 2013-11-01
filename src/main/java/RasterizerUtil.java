@@ -284,7 +284,7 @@ public class RasterizerUtil {
 
 		// Post process the raster output
 		// We need a grey version of each icon for disabled states
-		try {
+		/*try {
 			ImageIO.write(read, PNG, new File(icon.outputPath, icon.nameBase
 					+ "_4x.png"));
 
@@ -305,7 +305,7 @@ public class RasterizerUtil {
 			e1.printStackTrace();
 			failedIcons.add(icon);
 			return;
-		}
+		}*/
 
 		try {
 			// Icons lose definition and accuracy when rendered directly
@@ -321,7 +321,10 @@ public class RasterizerUtil {
 
 			ImageIO.write(rescaled16, PNG, new File(icon.outputPath,
 					icon.nameBase + ".png"));
-
+			
+			icon.galleryRasterPath = new File(icon.outputPath, icon.nameBase
+					+ ".png");
+			
 			if (icon.disabledPath != null) {
 				BufferedImage desaturated16 = desaturator.filter(
 						grayFilter.filter(rescaled16, null), null);
@@ -330,7 +333,7 @@ public class RasterizerUtil {
 						icon.nameBase + ".png"));
 			}
 
-			System.out.println(Thread.currentThread().getName() + " "
+			/*System.out.println(Thread.currentThread().getName() + " "
 					+ " Rasterizing (Scaling Half): " + icon.nameBase
 					+ ".png at " + doubleWidth + "x" + doubleWidth);
 
@@ -346,7 +349,7 @@ public class RasterizerUtil {
 
 				ImageIO.write(desaturated32, PNG, new File(icon.disabledPath,
 						icon.nameBase + "_2x.png"));
-			}
+			}*/
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
