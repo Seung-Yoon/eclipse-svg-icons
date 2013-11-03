@@ -15,7 +15,7 @@
    id="svg4223"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="jexception_obj.svg">
+   sodipodi:docname="jrtexception_obj.svg">
   <defs
      id="defs4225">
     <linearGradient
@@ -33,11 +33,11 @@
       <stop
          id="stop23114"
          offset="0"
-         style="stop-color:#ffdf7f;stop-opacity:1" />
+         style="stop-color:#f68886;stop-opacity:1" />
       <stop
          id="stop23116"
          offset="1"
-         style="stop-color:#ffdf5f;stop-opacity:1" />
+         style="stop-color:#f4787b;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -54,11 +54,11 @@
       <stop
          id="stop23098"
          offset="0"
-         style="stop-color:#be9c28;stop-opacity:1" />
+         style="stop-color:#c9473e;stop-opacity:1" />
       <stop
          id="stop23100"
          offset="1"
-         style="stop-color:#aa821e;stop-opacity:1" />
+         style="stop-color:#c8192a;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -73,15 +73,15 @@
     <linearGradient
        id="linearGradient23102">
       <stop
-         style="stop-color:#cfa73e;stop-opacity:1"
+         style="stop-color:#c9473e;stop-opacity:1"
          offset="0"
          id="stop23104" />
       <stop
          id="stop23118"
          offset="0.25388375"
-         style="stop-color:#fecf6c;stop-opacity:1" />
+         style="stop-color:#f35863;stop-opacity:1" />
       <stop
-         style="stop-color:#ffea91;stop-opacity:1"
+         style="stop-color:#f6928e;stop-opacity:1"
          offset="1"
          id="stop23106" />
     </linearGradient>
@@ -99,11 +99,11 @@
        inkscape:collect="always"
        id="linearGradient23086">
       <stop
-         style="stop-color:#be9c28;stop-opacity:1"
+         style="stop-color:#c9473e;stop-opacity:1"
          offset="0"
          id="stop23088" />
       <stop
-         style="stop-color:#aa821e;stop-opacity:1"
+         style="stop-color:#c8192a;stop-opacity:1"
          offset="1"
          id="stop23090" />
     </linearGradient>
@@ -116,7 +116,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="15.839192"
-     inkscape:cx="1.409451"
+     inkscape:cx="3.9032651"
      inkscape:cy="15.789963"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
