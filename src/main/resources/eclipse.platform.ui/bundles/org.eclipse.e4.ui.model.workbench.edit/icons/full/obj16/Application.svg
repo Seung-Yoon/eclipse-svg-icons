@@ -12,21 +12,22 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="16"
    height="16"
-   id="svg3001"
+   id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 4">
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="Application.svg">
   <defs
-     id="defs3003">
+     id="defs4">
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient18598"
-       id="linearGradient18604"
-       x1="2"
-       y1="1040.3622"
-       x2="2"
+       gradientTransform="translate(0,3.0397883e-5)"
        y2="1046.3622"
-       gradientUnits="userSpaceOnUse" />
+       x2="2"
+       y1="1040.3622"
+       x1="2"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient17920"
+       xlink:href="#linearGradient18598"
+       inkscape:collect="always" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient18598">
@@ -537,13 +538,13 @@
          id="stop4998-5-0-9-57" />
     </linearGradient>
     <linearGradient
-       gradientTransform="translate(0,3.0397883e-5)"
        y2="1046.3622"
        x2="2"
        y1="1040.3622"
        x1="2"
+       gradientTransform="translate(0,3.0397883e-5)"
        gradientUnits="userSpaceOnUse"
-       id="linearGradient17920"
+       id="linearGradient3506"
        xlink:href="#linearGradient18598"
        inkscape:collect="always" />
   </defs>
@@ -554,34 +555,34 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="22.355403"
-     inkscape:cy="5.2770176"
+     inkscape:zoom="20.48"
+     inkscape:cx="2.9255652"
+     inkscape:cy="12.766785"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="463"
-     inkscape:window-height="453"
-     inkscape:window-x="1613"
-     inkscape:window-y="191"
+     inkscape:window-width="953"
+     inkscape:window-height="789"
+     inkscape:window-x="275"
+     inkscape:window-y="275"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
-       id="grid3009"
+       id="grid2985"
        empspacing="5"
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <metadata
-     id="metadata3006">
+     id="metadata7">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -595,7 +596,7 @@
        inkscape:connector-curvature="0"
        id="rect3997-9"
        d="m 1.495586,1036.8977 12.004414,0 0,10.0292 -12.004414,0 z"
-       style="fill:#f4fcff;fill-opacity:1;stroke:url(#linearGradient17920);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+       style="fill:#f4fcff;fill-opacity:1;stroke:url(#linearGradient3506);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
@@ -668,7 +669,7 @@
        width="14.961353"
        height="2.8577864"
        x="21.792915"
-       y="1021.8484" />
+       y="1021.8483" />
     <path
        style="fill:url(#linearGradient3878);fill-opacity:1;stroke:url(#linearGradient3886);stroke-width:0.16641554;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 32.696719,1016.4778 c -0.297171,0.208 -0.71321,0.3566 -1.129248,0.3269 -0.416039,-0.03 -1.010381,0.1783 -1.069814,-0.2674 -0.05944,-0.4458 -0.267454,-0.2675 -0.416039,-0.6241 -0.148586,-0.3566 -0.237736,-0.5646 -0.118868,-0.7726 0.118868,-0.2081 0.356604,-0.1784 0.50519,-0.3566 0.148585,-0.1784 0.267453,-0.535 0.534907,-0.5647 0.267453,-0.03 0.50519,0 0.653775,-0.03 0.148586,-0.03 0.534907,-0.4457 0.772644,-0.2674 0.237736,0.1783 0.178302,0.5349 0.416039,0.5646 0.237736,0.03 0.208019,0.1486 0.534907,-0.1783 0.326887,-0.3269 0.475472,-0.5646 0.832077,-0.6835 0.356605,-0.1189 0.71321,-0.208 1.040098,-0.1189 0.326887,0.089 0.475472,0.1189 0.742926,0.2378 0.267453,0.1188 -0.08915,0.624 -0.594341,0.7726 -0.505191,0.1486 -0.505191,0.089 -0.891512,0.416 -0.386322,0.3269 -1.040097,0.4161 -0.950946,0.5944 0.08915,0.1783 0,0.1783 0.326888,0.1783 0.326887,0 0.861794,-0.03 0.653775,0.2377 -0.208019,0.2675 0.08915,0.4458 -0.386322,0.5349 -0.475472,0.089 -0.594341,-0.1486 -0.594341,0.089 0,0.2377 -0.148585,0.624 -0.326888,0.2377 -0.178302,-0.3863 -0.534907,-0.3269 -0.534907,-0.3269 z"

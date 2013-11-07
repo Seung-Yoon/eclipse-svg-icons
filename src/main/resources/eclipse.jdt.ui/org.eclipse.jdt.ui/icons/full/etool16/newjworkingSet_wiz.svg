@@ -14,8 +14,8 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="newjworkingSet_wiz.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -84,16 +84,6 @@
          offset="1"
          style="stop-color:#c38536;stop-opacity:1" />
     </linearGradient>
-    <linearGradient
-       y2="373.2294"
-       x2="543.91406"
-       y1="373.2294"
-       x1="525.6676"
-       gradientTransform="matrix(0.33025864,0,0,0.33025864,-167.60626,920.62713)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient27154"
-       xlink:href="#linearGradient3955-64"
-       inkscape:collect="always" />
     <linearGradient
        id="linearGradient3955-64">
       <stop
@@ -552,16 +542,6 @@
            style="fill:#ffffff;fill-opacity:1;display:inline" />
       </g>
     </mask>
-    <mask
-       maskUnits="userSpaceOnUse"
-       id="mask18917">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
-         d="m 462.77563,373.22885 29.11636,0 c 1.45425,0 2.625,1.17075 2.625,2.625 l 0,18.76896 c 0,1.45425 -1.17412,2.52598 -2.625,2.625 l -29.11636,1.98708 c -1.45088,0.099 -2.625,-1.17075 -2.625,-2.625 l 0,-20.75604 c 0,-1.45425 1.17075,-2.625 2.625,-2.625 z"
-         id="path18919"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sssssssss" />
-    </mask>
     <filter
        color-interpolation-filters="sRGB"
        inkscape:collect="always"
@@ -831,16 +811,6 @@
            style="fill:#ffffff;fill-opacity:1;display:inline" />
       </g>
     </mask>
-    <mask
-       maskUnits="userSpaceOnUse"
-       id="mask18971">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
-         d="m 462.77563,373.22885 29.11636,0 c 1.45425,0 2.625,1.17075 2.625,2.625 l 0,18.76896 c 0,1.45425 -1.17412,2.52598 -2.625,2.625 l -29.11636,1.98708 c -1.45088,0.099 -2.625,-1.17075 -2.625,-2.625 l 0,-20.75604 c 0,-1.45425 1.17075,-2.625 2.625,-2.625 z"
-         id="path18973"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sssssssss" />
-    </mask>
     <filter
        color-interpolation-filters="sRGB"
        inkscape:collect="always"
@@ -980,10 +950,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="463"
-     inkscape:window-height="453"
-     inkscape:window-x="1313"
-     inkscape:window-y="1008"
+     inkscape:window-width="469"
+     inkscape:window-height="455"
+     inkscape:window-x="1040"
+     inkscape:window-y="419"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -1001,7 +971,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
