@@ -85,6 +85,24 @@
 			</classpath>
 		</java>
 	</target>
+	
+	<!--
+      Generate stars
+ 	-->
+	<target name="generate-stars" depends="compile" description="Generate stars">
+
+		<path id="classpath">
+			<pathelement location="${build}" />
+			<fileset dir=".">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+
+		<java classname="E4EditStarGenerator">
+			<classpath refid="classpath">
+			</classpath>
+		</java>
+	</target>
 
 	<!--
      Package the icon set up for distribution.
