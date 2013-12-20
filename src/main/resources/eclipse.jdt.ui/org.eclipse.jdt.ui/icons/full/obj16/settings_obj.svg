@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="settings_obj.svg">
   <defs
      id="defs4">
@@ -48,7 +48,8 @@
        y1="2"
        x2="-8"
        y2="1.375"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,1035.8622)" />
     <linearGradient
        id="linearGradient7254-6">
       <stop
@@ -61,7 +62,7 @@
          id="stop7258-7" />
     </linearGradient>
     <linearGradient
-       gradientTransform="matrix(0.93721973,0,0,1,1036.9601,-3.593733)"
+       gradientTransform="matrix(0.93721973,0,0,1,1036.4601,-3.593733)"
        y2="2"
        x2="-3.2642515"
        y1="2"
@@ -82,7 +83,7 @@
          id="stop7258-0" />
     </linearGradient>
     <linearGradient
-       gradientTransform="translate(-16.0625,1038.3622)"
+       gradientTransform="translate(-16.0625,1037.8622)"
        y2="2"
        x2="-17.187742"
        y1="2"
@@ -107,7 +108,7 @@
        x2="-28.335314"
        y1="2"
        x1="15.000595"
-       gradientTransform="matrix(0.93721973,0,0,1,1036.9602,-16.656233)"
+       gradientTransform="matrix(0.93721973,0,0,1,1036.4602,-16.656233)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient7362"
        xlink:href="#linearGradient7254-6-4"
@@ -121,7 +122,7 @@
        x2="14.142135"
        y2="3.0732041"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.99637681,0,0,1,0.05123962,1036.3622)" />
+       gradientTransform="matrix(0.99637681,0,0,1,0.05123962,1035.8622)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -130,9 +131,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="23.113444"
-     inkscape:cy="1.4136282"
+     inkscape:zoom="32"
+     inkscape:cx="6.860821"
+     inkscape:cy="7.5713757"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -166,42 +167,41 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <rect
-       style="opacity:1;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7499"
        width="14.142136"
        height="13.169864"
        x="0.9722718"
-       y="1.5485051"
-       transform="translate(0,1036.3622)" />
+       y="1037.4106" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2"
        width="1.125"
-       height="12.09375"
-       x="-1043.0809"
-       y="2"
+       height="12.15625"
+       x="-1042.4872"
+       y="1.96875"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
-       style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415"
        width="1.125"
        height="12.9375"
        x="5.125"
-       y="1037.9872" />
+       y="1037.4872" />
     <rect
-       style="color:#000000;fill:url(#linearGradient7362);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:url(#linearGradient7362);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7244-4-4"
        width="13.0625"
        height="1"
-       x="1037.9559"
+       x="1037.4559"
        y="-15.09375"
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
-       style="color:#000000;fill:url(#linearGradient7277);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:url(#linearGradient7277);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7244-4"
        width="13.0625"
        height="1"
-       x="1037.9559"
+       x="1037.4559"
        y="-2.03125"
        transform="matrix(0,1,-1,0,0,0)" />
     <rect
@@ -210,22 +210,21 @@
        width="12.153398"
        height="1.1932427"
        x="1.9887378"
-       y="1038.8387" />
+       y="1038.3387" />
     <rect
-       style="color:#000000;fill:url(#linearGradient7260);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:url(#linearGradient7260);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7244"
        width="13.9375"
        height="1"
        x="1.0625"
-       y="1.5625"
-       transform="translate(0,1036.3622)" />
+       y="1037.4247" />
     <rect
-       style="color:#000000;fill:url(#linearGradient7328);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:url(#linearGradient7328);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7244-7"
        width="13.9375"
        height="1"
        x="-15"
-       y="1039.9247"
+       y="1039.4247"
        transform="scale(-1,1)" />
     <rect
        style="color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -233,30 +232,30 @@
        width="14.0625"
        height="1"
        x="1.0625"
-       y="1049.9872" />
+       y="1049.4872" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4"
        width="1.125"
-       height="12.125"
-       x="-1045.2906"
-       y="1.96875"
+       height="12.25"
+       x="-1044.4469"
+       y="1.84375"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4-3"
        width="1.125"
        height="12.09375"
-       x="-1047.5887"
-       y="2"
+       x="-1046.495"
+       y="2.03125"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4-3-9"
        width="1.125"
-       height="12.0625"
-       x="-1049.931"
-       y="2.03125"
+       height="12.1875"
+       x="-1048.4623"
+       y="1.9375"
        transform="matrix(0,-1,1,0,0,0)" />
   </g>
 </svg>

@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="default_persp.svg">
   <defs
      id="defs4">
@@ -170,7 +170,8 @@
        x1="641.07611"
        y1="308.68875"
        x2="641.07611"
-       y2="276.3064" />
+       y2="276.3064"
+       gradientTransform="translate(0,-0.78395737)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8653"
@@ -179,7 +180,8 @@
        x1="641.07611"
        y1="308.68875"
        x2="641.07611"
-       y2="276.3064" />
+       y2="276.3064"
+       gradientTransform="translate(0,-0.78395737)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8653"
@@ -188,7 +190,8 @@
        x1="641.07611"
        y1="308.68875"
        x2="641.07611"
-       y2="276.3064" />
+       y2="276.3064"
+       gradientTransform="translate(0,-0.78395737)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8653"
@@ -236,17 +239,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="9.1720802"
-     inkscape:cy="-0.62916904"
+     inkscape:zoom="32"
+     inkscape:cx="7.1841839"
+     inkscape:cy="7.7092165"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1138"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:current-layer="g8643"
+     showgrid="true"
+     inkscape:window-width="937"
+     inkscape:window-height="714"
+     inkscape:window-x="1291"
+     inkscape:window-y="599"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3032" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -300,29 +310,29 @@
          id="g8643">
         <rect
            id="rect8645"
-           style="fill:none;stroke:url(#linearGradient8689);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-           width="41.395386"
-           height="41"
-           x="613.57178"
-           y="268.004"
+           style="fill:none;stroke:url(#linearGradient8689);stroke-width:3.58380508;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           width="39.827492"
+           height="39.768032"
+           x="614.35571"
+           y="268.67596"
            rx="2.5632601"
            ry="2.5632601" />
         <path
            id="path8647"
-           style="fill:none;stroke:url(#linearGradient8691);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           d="m 613.49908,294.54968 15.68842,0"
+           style="fill:none;stroke:url(#linearGradient8691);stroke-width:3.58380508;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 613.49908,293.76572 15.68842,0"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc" />
         <path
            id="path8649"
-           style="fill:none;stroke:url(#linearGradient8693);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           d="m 629.3125,291.23718 26.3125,0"
+           style="fill:none;stroke:url(#linearGradient8693);stroke-width:3.58380508;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 629.3125,290.45322 26.3125,0"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc" />
         <path
            id="path8651"
-           style="fill:none;stroke:url(#linearGradient8695);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           d="m 629.1875,275.98718 0,32.84375"
+           style="fill:none;stroke:url(#linearGradient8695);stroke-width:3.58380508;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 629.1875,275.20322 0,32.84375"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc" />
       </g>
