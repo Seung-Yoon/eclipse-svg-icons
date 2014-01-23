@@ -34,6 +34,7 @@ import org.apache.batik.util.XMLResourceDescriptor;
 import org.w3c.dom.Element;
 import org.w3c.dom.svg.SVGDocument;
 
+import com.jhlabs.image.ContrastFilter;
 import com.jhlabs.image.GrayscaleFilter;
 import com.jhlabs.image.HSBAdjustFilter;
 import com.mortennobel.imagescaling.ResampleFilters;
@@ -200,6 +201,10 @@ public class RasterizerUtil {
 
         HSBAdjustFilter desaturator = new HSBAdjustFilter();
         desaturator.setSFactor(0.0f);
+        
+       /* ContrastFilter contrast = new ContrastFilter();
+        	contrast.setBrightness(2.9f);
+        	contrast.setContrast(0.2f);*/
 
         // Load the document and find out the native height/width
         // We reuse the document later for rasterization
@@ -290,6 +295,8 @@ public class RasterizerUtil {
                 BufferedImage desaturated16 = desaturator.filter(
                         grayFilter.filter(read, null), null);
 
+                //BufferedImage decontrast = contrast.filter(desaturated16, null);
+                
                 ImageIO.write(desaturated16, PNG, new File(icon.disabledPath,
                         icon.nameBase + ".png"));
             }
