@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="brkp_obj.svg">
   <defs
      id="defs4">
@@ -42,6 +42,39 @@
        id="linearGradient4871"
        xlink:href="#linearGradient4894"
        inkscape:collect="always" />
+    <linearGradient
+       y2="6.8716693"
+       x2="8.7378912"
+       y1="2.1550355"
+       x1="8.7378912"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4871-9"
+       xlink:href="#linearGradient4894-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4894-3">
+      <stop
+         id="stop4896-2"
+         offset="0"
+         style="stop-color:#b4d1e5;stop-opacity:1" />
+      <stop
+         style="stop-color:#5395be;stop-opacity:1"
+         offset="0.5"
+         id="stop4898-4" />
+      <stop
+         id="stop4900-0"
+         offset="1"
+         style="stop-color:#91bcd7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       y2="6.8716693"
+       x2="8.7378912"
+       y1="2.1550355"
+       x1="8.7378912"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3005"
+       xlink:href="#linearGradient4894-3"
+       inkscape:collect="always" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -50,9 +83,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="45.254831"
-     inkscape:cx="6.3291708"
-     inkscape:cy="5.9636676"
+     inkscape:zoom="31.999998"
+     inkscape:cx="4.0997549"
+     inkscape:cy="5.4500497"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -86,6 +119,16 @@
      id="layer1"
      style="display:inline"
      transform="translate(0,-1036.3622)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+       id="path4035-4-5-7"
+       sodipodi:cx="8.531251"
+       sodipodi:cy="4.499999"
+       sodipodi:rx="2.8125002"
+       sodipodi:ry="2.8125002"
+       d="m 11.343751,4.499999 a 2.8125002,2.8125002 0 1 1 -5.6250003,0 2.8125002,2.8125002 0 1 1 5.6250003,0 z"
+       transform="matrix(1.5883369,0,0,1.5883369,-5.0580811,1036.7148)" />
     <path
        sodipodi:type="arc"
        style="fill:url(#linearGradient4871);fill-opacity:1;stroke:#264e72;stroke-width:0.93798536;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"

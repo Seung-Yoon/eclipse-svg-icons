@@ -13,7 +13,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="brkpd_obj.svg">
   <defs
      id="defs4" />
@@ -24,16 +24,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="31.999998"
-     inkscape:cx="6.6900295"
-     inkscape:cy="5.3402148"
+     inkscape:zoom="63.999996"
+     inkscape:cx="6.8658303"
+     inkscape:cy="9.1883866"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1241"
-     inkscape:window-height="814"
-     inkscape:window-x="88"
-     inkscape:window-y="106"
+     inkscape:window-width="1382"
+     inkscape:window-height="913"
+     inkscape:window-x="392"
+     inkscape:window-y="502"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -60,6 +60,16 @@
      id="layer1"
      style="display:inline"
      transform="translate(0,-1036.3622)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+       id="path4035-4-5-2"
+       sodipodi:cx="8.531251"
+       sodipodi:cy="4.499999"
+       sodipodi:rx="2.8125002"
+       sodipodi:ry="2.8125002"
+       d="m 11.343751,4.499999 a 2.8125002,2.8125002 0 1 1 -5.6250003,0 2.8125002,2.8125002 0 1 1 5.6250003,0 z"
+       transform="matrix(1.6003731,0,0,1.6003731,-5.1607652,1036.6827)" />
     <path
        sodipodi:type="arc"
        style="fill:#ffffff;fill-opacity:1;stroke:#4f504f;stroke-width:0.93798536000000021;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
