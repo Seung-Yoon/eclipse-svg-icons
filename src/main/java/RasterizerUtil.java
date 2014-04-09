@@ -764,9 +764,11 @@ public class RasterizerUtil {
         // rendered icons
         startTime = System.currentTimeMillis();
         System.out.println("Rendering icon galleries...");
-        rasterizer.renderGalleries(mavenTargetDir, 16, 800);
-        // rasterizer.renderGalleries(mavenTargetDir, 32, 800);
-        System.out.println("Icon Galleries Rendered, Took: "
+        //rasterizer.renderGalleries(mavenTargetDir, 16, 800);
+        //rasterizer.renderGalleries(mavenTargetDir, 32, 800);
+        rasterizer.renderGalleries(mavenTargetDir, 64, 800);
+
+	System.out.println("Icon Galleries Rendered, Took: "
                 + (System.currentTimeMillis() - startTime) + " ms.");
 
         System.out.println("Rasterization operations completed, Took: "
