@@ -99,7 +99,7 @@ public class RasterizerUtil {
     private List<IconDef> icons;
 
     /** A list of the output render sizes. */
-    private static final int[] SIZES = new int[] { 128 };
+    private static final int[] SIZES = new int[] { 16 };
 
     /** The pool used to render multiple icons concurrently. */
     private ExecutorService execPool;
@@ -766,7 +766,7 @@ public class RasterizerUtil {
         System.out.println("Rendering icon galleries...");
         //rasterizer.renderGalleries(mavenTargetDir, 16, 800);
         //rasterizer.renderGalleries(mavenTargetDir, 32, 800);
-        rasterizer.renderGalleries(mavenTargetDir, 64, 800);
+        rasterizer.renderGalleries(mavenTargetDir, 16, 800);
 
 	System.out.println("Icon Galleries Rendered, Took: "
                 + (System.currentTimeMillis() - startTime) + " ms.");
