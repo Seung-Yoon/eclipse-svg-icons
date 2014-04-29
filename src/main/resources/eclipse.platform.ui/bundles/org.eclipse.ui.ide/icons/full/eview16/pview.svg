@@ -271,14 +271,14 @@
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
      inkscape:cx="6.037241"
-     inkscape:cy="0.50420483"
+     inkscape:cy="11.110807"
      inkscape:document-units="px"
-     inkscape:current-layer="g14975"
+     inkscape:current-layer="g3969"
      showgrid="true"
      inkscape:window-width="1056"
      inkscape:window-height="796"
-     inkscape:window-x="863"
-     inkscape:window-y="447"
+     inkscape:window-x="1323"
+     inkscape:window-y="444"
      inkscape:window-maximized="0"
      inkscape:snap-global="false">
     <inkscape:grid
@@ -309,7 +309,7 @@
     <g
        id="g3969">
       <g
-         transform="translate(-0.06313449,-9.8851075)"
+         transform="translate(-0.99121214,-9.9293017)"
          id="g3819">
         <rect
            style="fill:url(#linearGradient3825-6);fill-opacity:1;stroke:none"
@@ -344,7 +344,7 @@
          transform="matrix(1.2210526,0,0,1.2210526,-2.1292952,-230.36387)">
         <path
            transform="matrix(1.1386602,0,0,1.1034706,-2.0234745,1033.5813)"
-           d="m 14.931318,12.480249 a 2.762136,2.762136 0 1 1 -5.5242722,0 2.762136,2.762136 0 1 1 5.5242722,0 z"
+           d="m 14.931318,12.480249 c 0,1.525486 -1.236651,2.762136 -2.762136,2.762136 -1.525486,0 -2.7621362,-1.23665 -2.7621362,-2.762136 0,-1.525485 1.2366502,-2.7621356 2.7621362,-2.7621356 1.525485,0 2.762136,1.2366506 2.762136,2.7621356 z"
            sodipodi:ry="2.762136"
            sodipodi:rx="2.762136"
            sodipodi:cy="12.480249"
@@ -376,7 +376,7 @@
            sodipodi:cy="468.23718"
            sodipodi:rx="9.083621"
            sodipodi:ry="9.083621"
-           d="m 397.20862,468.23718 a 9.083621,9.083621 0 1 1 -18.16724,0 9.083621,9.083621 0 1 1 18.16724,0 z"
+           d="m 397.20862,468.23718 c 0,5.01675 -4.06687,9.08362 -9.08362,9.08362 -5.01675,0 -9.08362,-4.06687 -9.08362,-9.08362 0,-5.01674 4.06687,-9.08362 9.08362,-9.08362 5.01675,0 9.08362,4.06688 9.08362,9.08362 z"
            transform="matrix(0.27940037,0,0,0.27940037,-96.513025,916.85962)" />
       </g>
     </g>

@@ -64,17 +64,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="8.5658456"
-     inkscape:cy="10.211371"
+     inkscape:zoom="31.678384"
+     inkscape:cx="7.6302739"
+     inkscape:cy="10.793567"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="903"
      inkscape:window-height="828"
-     inkscape:window-x="25"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0">
+     inkscape:window-x="1155"
+     inkscape:window-y="589"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid27664"
@@ -100,6 +101,12 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1036.3622)">
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 10.227794,11.643717 0.03157,-3.9774754 1.010152,-0.9154508 c 0,0 0.410375,-1.4520943 0.378807,-1.6099306 -0.03157,-0.1578363 -0.157836,-1.3889597 -0.157836,-1.3889597 0,0 -0.252538,-0.820749 -0.252538,-0.9785853 0,-0.1578363 -0.978585,-1.4836615 -0.978585,-1.4836615 0,0 -0.7576147,-0.1894036 -0.8838838,-0.2841054 C 9.2492112,0.9108464 8.7125676,0.40577019 8.7125676,0.40577019 c 0,0 -0.8207489,-0.12626907 -1.073287,-0.12626907 -0.2525382,0 -1.2311234,0.25253813 -1.420527,0.22097087 C 6.02935,0.46890469 4.5141212,0.81614465 4.5141212,0.81614465 c 0,0 -0.6629126,0.66291265 -0.7891817,0.82074895 -0.1262711,0.1578363 -0.8838855,0.6944799 -0.94702,1.0101525 -0.063135,0.3156727 -0.34724,1.7046324 -0.473509,1.8309015 -0.1262691,0.1262691 -0.5366436,1.1048543 -0.6313454,1.4520943 -0.094702,0.3472399 0,1.5152288 0.094702,2.0203051 0.094702,0.5050762 1.0101526,1.894036 1.0732871,2.241276 0.063134,0.34724 0.9785853,1.325825 0.9785853,1.325825 l 1.8309015,0.947018 c 0,0 1.546796,0.252538 1.6730651,0.252538 0.1262691,0 1.420527,-0.441941 1.420527,-0.441941 z"
+       id="path3002"
+       inkscape:connector-curvature="0"
+       transform="translate(0,1036.3622)" />
     <g
        style="font-size:11.05178356px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005597;fill-opacity:1;stroke:#005597;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;display:inline;font-family:AustralianFlyingCorpsStencil;-inkscape-font-specification:AustralianFlyingCorpsStencil"
        id="text3909-7-7-1"

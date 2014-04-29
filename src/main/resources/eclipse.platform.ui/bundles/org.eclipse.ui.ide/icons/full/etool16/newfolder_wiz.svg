@@ -346,9 +346,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="3.5762977"
-     inkscape:cy="3.9493177"
+     inkscape:zoom="64"
+     inkscape:cx="10.971114"
+     inkscape:cy="12.703581"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -405,7 +405,7 @@
        inkscape:connector-curvature="0" />
     <g
        id="g6432"
-       transform="translate(14,-11.1875)">
+       transform="translate(15.015625,-10.28125)">
       <path
          style="fill:url(#linearGradient6323);fill-opacity:1;stroke:none;display:inline"
          d="m -7.007813,1053.62 2,0 1.492188,-1.4844 -2.0312504,0 z"

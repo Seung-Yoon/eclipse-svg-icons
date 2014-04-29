@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="javadoc.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -147,17 +147,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.2"
-     inkscape:cx="9.5213131"
-     inkscape:cy="4.2024551"
+     inkscape:zoom="22.4"
+     inkscape:cx="8.8045215"
+     inkscape:cy="10.123816"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="463"
-     inkscape:window-height="453"
-     inkscape:window-x="766"
-     inkscape:window-y="913"
-     inkscape:window-maximized="0">
+     inkscape:window-width="946"
+     inkscape:window-height="943"
+     inkscape:window-x="1373"
+     inkscape:window-y="232"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid2985"
@@ -174,7 +175,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -233,6 +234,12 @@
         </g>
       </g>
     </g>
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 9.7767857,8.5446429 0,-1.3839286 L 10.357143,6.4910714 10.803571,5.1964286 10.580357,3.9017857 9.9107143,2.9196429 8.9732143,2.3839286 7.4553571,2.25 c 0,0 -1.0267857,0.3125 -1.2053571,0.3125 -0.1785714,0 -1.5625,1.1607143 -1.5625,1.1607143 L 3.7946429,5.0625 c 0,0 -0.3125,1.2053571 -0.3125,1.6517857 0,0.4464286 0.4464285,1.5625 0.4464285,1.5625 L 4.9107143,9.0357143 5.7142857,9.4375 6.6964286,9.6607143 7.9910714,9.3035714 9.1517857,9.0803571 z"
+       id="path3016"
+       inkscape:connector-curvature="0"
+       transform="translate(0,1036.3622)" />
     <g
        style="fill:#236298;fill-opacity:1;stroke:#236298;stroke-width:0.24860173;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        id="layer1-9"

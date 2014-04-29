@@ -270,7 +270,7 @@
        xlink:href="#linearGradient5068"
        id="linearGradient3064"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-0.0078125,0.015625)"
+       gradientTransform="translate(1.0377888,0.49256596)"
        x1="10"
        y1="1040.3622"
        x2="10.007812"
@@ -410,12 +410,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0153513"
-     inkscape:cx="-177.20337"
-     inkscape:cy="65.22283"
+     inkscape:zoom="45.602194"
+     inkscape:cx="7.8553189"
+     inkscape:cy="14.94495"
      inkscape:document-units="px"
      inkscape:current-layer="g3038"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1245"
      inkscape:window-height="804"
      inkscape:window-x="929"
@@ -494,7 +494,7 @@
       <path
          sodipodi:nodetypes="ccccc"
          id="path5581-1-1-89"
-         d="m 10,1038.3622 -2,0 1.4609375,1.5156 2.0312505,0 z"
+         d="m 11.045601,1038.8392 -1.9999997,0 1.4609377,1.5156 2.03125,0 z"
          style="fill:url(#linearGradient3064);fill-opacity:1;stroke:none;display:inline"
          inkscape:connector-curvature="0" />
       <path
@@ -512,7 +512,7 @@
       <g
          style="display:inline"
          id="g4514"
-         transform="matrix(0.83652132,0,0,0.83652132,9.9187208,156.77841)">
+         transform="matrix(0.83652132,0,0,0.83652132,9.9187208,157.5672)">
         <g
            id="g4522"
            transform="translate(-9.9375,0)">

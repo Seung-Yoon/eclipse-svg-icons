@@ -13,7 +13,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="eclipse_obj.svg"
    inkscape:export-filename="/home/tmccrary/git/eclipse-svg/eclipse-svg/src/main/resources/org.eclipse.ant.ui/icons/full/obj16/eclipse_obj2.png"
    inkscape:export-xdpi="90"
@@ -32,14 +32,18 @@
      inkscape:cy="7.9706008"
      inkscape:document-units="px"
      inkscape:current-layer="g4926"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1171"
      inkscape:window-height="959"
-     inkscape:window-x="1384"
-     inkscape:window-y="24"
+     inkscape:window-x="1208"
+     inkscape:window-y="377"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3754" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -61,8 +65,8 @@
     <g
        id="g4926">
       <path
-         transform="translate(-0.12500001,1036.331)"
-         d="m 14.75,8.1875 c 0,3.658886 -2.966114,6.625 -6.625,6.625 -3.6588865,0 -6.625,-2.966114 -6.625,-6.625 0,-3.6588865 2.9661135,-6.625 6.625,-6.625 3.658886,0 6.625,2.9661135 6.625,6.625 z"
+         transform="matrix(0.98584906,0,0,0.97641509,0.4899764,1036.8679)"
+         d="m 14.75,8.1875 a 6.625,6.625 0 1 1 -13.25,0 6.625,6.625 0 1 1 13.25,0 z"
          sodipodi:ry="6.625"
          sodipodi:rx="6.625"
          sodipodi:cy="8.1875"
@@ -71,19 +75,19 @@
          style="color:#000000;fill:#5a5194;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.44999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:type="arc" />
       <rect
-         y="1042.6747"
-         x="0.46875"
+         y="1043.2997"
+         x="0.9375"
          height="1.09375"
          width="15.03125"
          id="rect4882"
-         style="color:#000000;fill:#7386ef;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.44999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         style="color:#000000;fill:#7386ef;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <rect
-         y="1045.0184"
-         x="0.46875"
+         y="1045.3309"
+         x="0.9375"
          height="1.09375"
          width="15.03125"
          id="rect4882-2"
-         style="color:#000000;fill:#7386ef;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.44999999;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+         style="color:#000000;fill:#7386ef;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
   </g>
 </svg>

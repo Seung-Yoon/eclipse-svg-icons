@@ -372,16 +372,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="6.5831033"
-     inkscape:cy="2.9300221"
+     inkscape:zoom="22.627417"
+     inkscape:cx="6.3867749"
+     inkscape:cy="9.6851312"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1139"
      inkscape:window-height="936"
-     inkscape:window-x="1059"
-     inkscape:window-y="527"
+     inkscape:window-x="1254"
+     inkscape:window-y="555"
      inkscape:window-maximized="0"
      inkscape:snap-global="false">
     <inkscape:grid
@@ -411,7 +411,7 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <g
-       transform="matrix(0.27903303,0,0,0.27903303,-129.51159,939.94639)"
+       transform="matrix(0.27903303,0,0,0.27903303,-129.51159,942.9074)"
        style="display:inline"
        id="g13862">
       <g
@@ -472,7 +472,7 @@
     </g>
     <g
        id="g5996"
-       transform="translate(-40.665532,-3.4250483)">
+       transform="translate(-40.665532,-1.3479221)">
       <path
          sodipodi:nodetypes="ccccc"
          id="path5581-1-1-6"
@@ -489,7 +489,7 @@
     <g
        style="display:inline"
        id="g4514"
-       transform="translate(8.4499345,-16.874713)">
+       transform="translate(9.4664005,-15.902441)">
       <g
          id="g4522"
          transform="translate(-9.9375,0)">

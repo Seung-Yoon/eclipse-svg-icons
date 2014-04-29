@@ -180,7 +180,7 @@
      showgrid="true"
      inkscape:window-width="1054"
      inkscape:window-height="943"
-     inkscape:window-x="1508"
+     inkscape:window-x="1506"
      inkscape:window-y="496"
      inkscape:window-maximized="0"
      showguides="true"
@@ -209,7 +209,8 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <g
-       id="g3854">
+       id="g3854"
+       transform="translate(1.0606601,0)">
       <g
          transform="matrix(0.9346781,0,0,0.9346781,-14.571811,69.044514)"
          id="g8472"
@@ -303,11 +304,11 @@
           <g
              inkscape:label="Layer 1"
              id="layer1-8"
-             style="display:inline;fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1"
+             style="fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1;display:inline"
              transform="matrix(0,1.0698871,1.0698871,0,-1093.1782,1054.4736)">
             <g
                transform="matrix(0.27903303,0,0,0.27903303,-100.53208,912.07901)"
-               style="display:inline;fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1"
+               style="fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1;display:inline"
                id="g11331-3-1-1">
               <g
                  id="g13408-8"
@@ -315,15 +316,15 @@
             </g>
             <g
                transform="matrix(-1,0,0,1,16.12959,8.0140628)"
-               style="display:inline;fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1"
+               style="fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1;display:inline"
                id="g6124-3">
               <g
                  transform="scale(-1,1)"
-                 style="font-size:13.58917427000000089px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d34a50;fill-opacity:1;stroke:#a81d24;font-family:Sans;stroke-opacity:1"
+                 style="font-size:13.58917427px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1;font-family:Sans"
                  id="text6430" />
               <g
                  transform="scale(-1,1)"
-                 style="font-size:13.58917427000000089px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d34a50;fill-opacity:1;stroke:#a81d24;display:inline;font-family:Sans;stroke-opacity:1"
+                 style="font-size:13.58917427px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d34a50;fill-opacity:1;stroke:#a81d24;stroke-opacity:1;display:inline;font-family:Sans"
                  id="g6438" />
             </g>
           </g>

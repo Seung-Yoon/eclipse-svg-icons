@@ -32,8 +32,8 @@
      showgrid="true"
      inkscape:window-width="903"
      inkscape:window-height="828"
-     inkscape:window-x="25"
-     inkscape:window-y="25"
+     inkscape:window-x="1231"
+     inkscape:window-y="397"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,6 +60,11 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1036.3622)">
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 10.146574,1047.8898 0.03157,-3.9775 1.010152,-0.9154 c 0,0 0.410375,-1.4521 0.378807,-1.6099 -0.03157,-0.1579 -0.157836,-1.389 -0.157836,-1.389 0,0 -0.252538,-0.8207 -0.252538,-0.9786 0,-0.1578 -0.978585,-1.4836 -0.978585,-1.4836 0,0 -0.7576153,-0.1895 -0.8838843,-0.2842 -0.126269,-0.095 -0.662912,-0.5997 -0.662912,-0.5997 0,0 -0.820749,-0.1263 -1.073287,-0.1263 -0.252539,0 -1.231124,0.2525 -1.420527,0.221 -0.189404,-0.032 -1.704633,0.3156 -1.704633,0.3156 0,0 -0.662912,0.663 -0.789181,0.8208 -0.126272,0.1578 -0.883886,0.6945 -0.94702,1.0101 -0.06314,0.3157 -0.347241,1.7047 -0.47351,1.8309 -0.126269,0.1263 -0.5366431,1.1049 -0.6313449,1.4521 -0.094702,0.3473 0,1.5153 0.094702,2.0203 0.094702,0.5051 1.0101529,1.8941 1.0732869,2.2413 0.06313,0.3473 0.978586,1.3258 0.978586,1.3258 l 1.830901,0.9471 c 0,0 1.546796,0.2525 1.673065,0.2525 0.126269,0 1.420527,-0.4419 1.420527,-0.4419 z"
+       id="path3002"
+       inkscape:connector-curvature="0" />
     <g
        style="font-size:11.05178356px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005597;fill-opacity:1;stroke:#005597;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;display:inline;font-family:AustralianFlyingCorpsStencil;-inkscape-font-specification:AustralianFlyingCorpsStencil"
        id="text3909-7-7-1"
