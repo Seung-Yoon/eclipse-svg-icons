@@ -910,7 +910,11 @@
      inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
-       id="grid3233" />
+       id="grid3233"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -1107,6 +1111,15 @@
            d="m -6.7582319,1046.7203 c 0,0 0.3387599,0.2428 0.6630711,0.683"
            style="fill:none;stroke:#888888;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
       </g>
+      <rect
+         style="fill:none;stroke:#888888;stroke-width:1;stroke-miterlimit:3.79999995;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect3376"
+         width="43"
+         height="47"
+         x="-122"
+         y="-29"
+         transform="translate(-0.53033009,1037.0693)"
+         ry="1.7499999" />
     </g>
   </g>
 </svg>
