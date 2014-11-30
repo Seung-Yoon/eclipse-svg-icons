@@ -14,15 +14,15 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="public_co.svg">
   <defs
      id="defs4">
     <linearGradient
-       y2="462.11539"
-       x2="388.63736"
-       y1="478.18777"
-       x1="388.63736"
+       y2="464.20261"
+       x2="388.37155"
+       y1="473.49158"
+       x1="388.50446"
        gradientUnits="userSpaceOnUse"
        id="linearGradient3929-5"
        xlink:href="#linearGradient10798-1-9-3-7-6-8-9-0-9-1"
@@ -50,9 +50,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="6.219408"
-     inkscape:cy="2.4135557"
+     inkscape:zoom="22.627417"
+     inkscape:cx="9.3015533"
+     inkscape:cy="6.0704813"
      inkscape:document-units="px"
      inkscape:current-layer="g6438"
      showgrid="true"
@@ -62,7 +62,8 @@
      inkscape:window-y="114"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid3949" />
@@ -107,14 +108,14 @@
          id="g6438">
         <path
            sodipodi:type="arc"
-           style="fill:url(#linearGradient3929-5);fill-opacity:1;stroke:#14733c;stroke-width:2.16621375;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+           style="fill:url(#linearGradient3929-5);fill-opacity:1;stroke:#14733c;stroke-width:2.90788341000000017;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
            id="path10796-2-6-2"
            sodipodi:cx="388.125"
            sodipodi:cy="468.23718"
            sodipodi:rx="10.625"
            sodipodi:ry="10.625"
-           d="m 398.75,468.23718 c 0,5.86803 -4.75697,10.625 -10.625,10.625 -5.86803,0 -10.625,-4.75697 -10.625,-10.625 0,-5.86802 4.75697,-10.625 10.625,-10.625 5.86803,0 10.625,4.75698 10.625,10.625 z"
-           transform="matrix(0.34389274,0,0,0.34389274,-141.73639,875.28143)" />
+           d="m 398.75,468.23718 a 10.625,10.625 0 1 1 -21.25,0 10.625,10.625 0 1 1 21.25,0 z"
+           transform="matrix(0.33254265,0,0,0.33878182,-137.10931,877.74085)" />
       </g>
     </g>
   </g>

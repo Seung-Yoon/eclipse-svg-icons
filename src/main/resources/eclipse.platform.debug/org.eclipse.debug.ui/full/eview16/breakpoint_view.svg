@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="breakpoint_view.svg">
   <defs
      id="defs4">
@@ -26,7 +26,7 @@
          style="stop-color:#b4d1e5;stop-opacity:1" />
       <stop
          style="stop-color:#5395be;stop-opacity:1"
-         offset="0.5"
+         offset="0.46331143"
          id="stop4898-0-0" />
       <stop
          id="stop4900-9-9"
@@ -36,7 +36,7 @@
     <linearGradient
        y2="6.8716693"
        x2="8.7378912"
-       y1="2.1550355"
+       y1="3.2678857"
        x1="8.7378912"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4076"
@@ -50,7 +50,7 @@
          style="stop-color:#b4d1e5;stop-opacity:1" />
       <stop
          style="stop-color:#5395be;stop-opacity:1"
-         offset="0.5"
+         offset="0.51269346"
          id="stop4898-0-0-2" />
       <stop
          id="stop4900-9-9-4"
@@ -60,7 +60,7 @@
     <linearGradient
        y2="6.8716693"
        x2="8.7378912"
-       y1="2.1550355"
+       y1="3.1809571"
        x1="8.7378912"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4113"
@@ -112,7 +112,7 @@
      transform="translate(0,-1036.3622)">
     <path
        sodipodi:type="arc"
-       style="fill:url(#linearGradient4076);fill-opacity:1;stroke:#264e72;stroke-width:0.93798536;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="fill:url(#linearGradient4076);fill-opacity:1;stroke:#264e72;stroke-width:0.93798536000000021;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        id="path4035-4-5-4"
        sodipodi:cx="8.531251"
        sodipodi:cy="4.499999"
@@ -122,7 +122,7 @@
        transform="matrix(1.0661147,0,0,1.0661147,-4.6249899,1037.0647)" />
     <path
        sodipodi:type="arc"
-       style="fill:url(#linearGradient4113);fill-opacity:1;stroke:#264e72;stroke-width:0.93798536;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="fill:url(#linearGradient4113);fill-opacity:1;stroke:#264e72;stroke-width:0.93798536000000021;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        id="path4035-4-5-4-5"
        sodipodi:cx="8.531251"
        sodipodi:cy="4.499999"

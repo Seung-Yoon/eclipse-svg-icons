@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="run_exc.svg">
   <defs
      id="defs4">
@@ -50,19 +50,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="8.0813766"
-     inkscape:cy="16.20081"
+     inkscape:zoom="31.999999"
+     inkscape:cx="12.94071"
+     inkscape:cy="9.8699871"
      inkscape:document-units="px"
      inkscape:current-layer="g8159"
-     showgrid="false"
+     showgrid="true"
      inkscape:window-width="1171"
      inkscape:window-height="959"
      inkscape:window-x="1357"
      inkscape:window-y="309"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2990" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>

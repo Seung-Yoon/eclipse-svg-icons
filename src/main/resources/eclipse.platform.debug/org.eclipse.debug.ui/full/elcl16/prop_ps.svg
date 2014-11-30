@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="prop_ps.svg">
   <defs
      id="defs4">
@@ -133,17 +133,18 @@
      inkscape:pageshadow="2"
      inkscape:zoom="32"
      inkscape:cx="10.07852"
-     inkscape:cy="11.787627"
+     inkscape:cy="8.682008"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1171"
      inkscape:window-height="959"
-     inkscape:window-x="1384"
-     inkscape:window-y="24"
+     inkscape:window-x="1727"
+     inkscape:window-y="281"
      inkscape:window-maximized="0"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid4046" />
@@ -174,19 +175,19 @@
        x="0.9410218"
        y="1037.3481" />
     <rect
-       style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2"
-       width="1.125"
+       width="0.9687674"
        height="12.09375"
-       x="-1042.5184"
+       x="-1042.3622"
        y="1.96875"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415"
-       width="1.125"
+       width="1"
        height="12.9375"
-       x="5.09375"
+       x="5"
        y="1037.4247" />
     <rect
        style="color:#000000;fill:url(#linearGradient7362);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -236,25 +237,25 @@
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4"
-       width="1.125"
+       width="1.03125"
        height="12.125"
-       x="-1044.7281"
-       y="1.9375"
+       x="-1044.3844"
+       y="1.84375"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4-3"
-       width="1.125"
+       width="1.03125"
        height="12.09375"
-       x="-1047.0262"
-       y="1.96875"
+       x="-1046.4012"
+       y="1.9375"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
        style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect7415-2-4-3-9"
-       width="1.125"
+       width="0.96875"
        height="12.0625"
-       x="-1049.3685"
+       x="-1048.3685"
        y="2"
        transform="matrix(0,-1,1,0,0,0)" />
   </g>

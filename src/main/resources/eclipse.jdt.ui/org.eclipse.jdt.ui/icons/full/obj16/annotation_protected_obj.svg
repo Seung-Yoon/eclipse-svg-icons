@@ -14,7 +14,7 @@
    height="16"
    id="svg27656"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="annotation_protected_obj.svg">
   <defs
      id="defs27658">
@@ -89,13 +89,14 @@
      inkscape:cx="8.9752496"
      inkscape:cy="10.563367"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6438-1"
      showgrid="true"
      inkscape:window-width="903"
      inkscape:window-height="828"
      inkscape:window-x="1176"
      inkscape:window-y="533"
-     inkscape:window-maximized="0">
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid27664"
@@ -141,7 +142,7 @@
        style="display:inline"
        id="layer1-5"
        inkscape:label="Layer 1"
-       transform="translate(4.0333407,2.0445373)">
+       transform="matrix(0.90096436,0,0,0.90287149,4.792329,103.5657)">
       <g
          id="g11331-3-1-1-6"
          style="display:inline"
@@ -190,7 +191,7 @@
                 <rect
                    ry="0.6875"
                    rx="0.6875"
-                   style="fill:url(#linearGradient5742-5);fill-opacity:1;stroke:url(#linearGradient9806);stroke-width:1.01823986;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+                   style="fill:url(#linearGradient5742-5);fill-opacity:1;stroke:url(#linearGradient9806);stroke-width:1.10874896;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
                    id="rect6724-2"
                    width="5.9599032"
                    height="5.9599032"

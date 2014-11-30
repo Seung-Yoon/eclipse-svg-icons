@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="resume_co.svg"
    inkscape:export-filename="C:\Users\jmietling\Documents\rect3997-9-1.png"
    inkscape:export-xdpi="90"
@@ -49,7 +49,7 @@
       <stop
          id="stop8206"
          offset="0.5"
-         style="stop-color:#f8d880;stop-opacity:1" />
+         style="stop-color:#eccd7a;stop-opacity:1;" />
       <stop
          style="stop-color:#f8f0b0;stop-opacity:1"
          offset="1"
@@ -132,17 +132,17 @@
        x1="5.7773919"
        y1="1066.6444"
        x2="5.7773919"
-       y2="1054.3945"
+       y2="1056.7356"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(7.7525652,0)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient8198"
        id="linearGradient8204"
-       x1="7.2620707"
-       y1="1063.8496"
-       x2="7.2620707"
-       y2="1057.5649"
+       x1="7.2049675"
+       y1="1062.422"
+       x2="7.2049675"
+       y2="1059.9626"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(7.7525652,0)" />
     <linearGradient
@@ -172,7 +172,7 @@
        xlink:href="#linearGradient8303"
        id="linearGradient8309"
        x1="5.9487009"
-       y1="1055.4524"
+       y1="1057.2797"
        x2="5.9487009"
        y2="1065.5316"
        gradientUnits="userSpaceOnUse"
@@ -198,15 +198,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627416"
-     inkscape:cx="0.81558817"
+     inkscape:cx="-7.2056547"
      inkscape:cy="10.020779"
      inkscape:document-units="px"
      inkscape:current-layer="g8159"
      showgrid="true"
      inkscape:window-width="1458"
      inkscape:window-height="814"
-     inkscape:window-x="865"
-     inkscape:window-y="645"
+     inkscape:window-x="810"
+     inkscape:window-y="762"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -249,14 +249,14 @@
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cccc" />
         <rect
-           style="fill:url(#linearGradient8204);fill-opacity:1;stroke:url(#linearGradient8196);stroke-width:1.29209423;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           style="fill:url(#linearGradient8204);fill-opacity:1.0;stroke:url(#linearGradient8196);stroke-width:1.29209423000000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
            id="rect8188"
            width="5.2249279"
            height="11.649019"
            x="11.178096"
            y="1054.7385" />
         <rect
-           style="fill:none;stroke:url(#linearGradient8309);stroke-width:0.93548667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;filter:url(#filter8319)"
+           style="fill:none;stroke:url(#linearGradient8309);stroke-width:0.93548666999999996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;filter:url(#filter8319)"
            id="rect8188-7-4"
            width="3.3545172"
            height="9.5110073"

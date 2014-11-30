@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="printview_tsk.svg">
   <defs
      id="defs4">
@@ -260,6 +260,16 @@
        id="linearGradient4958"
        xlink:href="#linearGradient4937-5"
        inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4887"
+       id="linearGradient3059"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-20,0)"
+       x1="28"
+       y1="1050.6561"
+       x2="28"
+       y2="1050.2075" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -268,9 +278,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="25.279465"
-     inkscape:cy="0.020005998"
+     inkscape:zoom="45.254834"
+     inkscape:cx="13.925978"
+     inkscape:cy="0.98643489"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -305,7 +315,7 @@
      style="display:inline"
      transform="translate(0,-1036.3622)">
     <rect
-       style="fill:url(#linearGradient4893);fill-opacity:1;stroke:url(#linearGradient4901);stroke-opacity:1;display:inline"
+       style="fill:url(#linearGradient3059);fill-opacity:1;stroke:url(#linearGradient4901);stroke-opacity:1;display:inline"
        id="rect4051-2"
        width="12.001725"
        height="3.5034955"

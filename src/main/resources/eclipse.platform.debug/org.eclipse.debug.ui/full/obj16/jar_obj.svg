@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="jar_obj.svg">
   <defs
      id="defs4">
@@ -155,16 +155,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="33.004068"
-     inkscape:cy="-10.60689"
+     inkscape:zoom="45.254832"
+     inkscape:cx="18.072093"
+     inkscape:cy="6.2971325"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1882"
      inkscape:window-height="1174"
-     inkscape:window-x="22"
-     inkscape:window-y="0"
+     inkscape:window-x="435"
+     inkscape:window-y="1108"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -204,18 +204,18 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccssssssc" />
     <path
-       style="fill:none;stroke:url(#linearGradient4882);stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
+       style="fill:none;stroke:url(#linearGradient4882);stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline;stroke-dasharray:none"
        d="m 6.253476,1039.2695 4.507805,0 c 0.453044,1.6907 2.762136,2.5911 2.762136,5.1157 l 0,3.7565 c 0,1.5302 -1.231912,2.7621 -2.762136,2.7621 l -4.507805,0 c -1.530224,0 -2.762136,-1.2319 -2.762136,-2.7621 l 0,-3.7565 c 0,-2.5909 2.334749,-3.5207 2.762136,-5.1157 z"
        id="rect4044-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccssssssc" />
     <rect
-       style="fill:url(#linearGradient4823);fill-opacity:1;stroke:url(#linearGradient4831);stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:url(#linearGradient4823);fill-opacity:1;stroke:url(#linearGradient4831);stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect4815"
-       width="8.2201157"
-       height="2.1876116"
-       x="4.3973198"
-       y="1037.7781"
+       width="7.9991446"
+       height="1.9224665"
+       x="4.4857082"
+       y="1037.8665"
        rx="0.76234949"
        ry="0.76234949" />
   </g>
