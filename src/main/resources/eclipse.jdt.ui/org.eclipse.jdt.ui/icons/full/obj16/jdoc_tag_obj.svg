@@ -13,7 +13,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="jdoc_tag_obj.svg">
   <defs
      id="defs4" />
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.828427"
-     inkscape:cx="0.62435933"
-     inkscape:cy="37.455231"
+     inkscape:zoom="45.254832"
+     inkscape:cx="7.489494"
+     inkscape:cy="6.0570348"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -58,6 +58,12 @@
      id="layer1"
      style="display:inline"
      transform="translate(0,-1036.3622)">
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 12.440661,6.1667959 c 0,-0.1104855 -0.618719,-1.3921166 -0.729204,-1.4363107 -0.110486,-0.044194 -1.37002,-0.9280777 -1.568894,-0.9280777 -0.1988734,0 -2.1876113,-0.066291 -2.1876113,-0.066291 0,0 -1.5909904,0.3093592 -1.8340583,0.4861359 C 5.8778254,4.3990291 5.1044273,5.128233 4.9497477,5.371301 4.7950681,5.614369 3.8669904,7.3379418 3.8227962,7.5368156 c -0.044194,0.1988738 0.066291,1.3258253 0.066291,1.4805049 0,0.1546796 0.4640388,1.8119605 0.5303301,1.9445435 0.066291,0.132582 0.9280777,0.861786 1.0827573,0.950175 0.1546796,0.08839 1.0606602,0.508233 1.1490486,0.574524 0.088388,0.06629 2.0550291,0.198874 2.0550291,0.198874 0,0 1.0164661,-0.265165 1.1048544,-0.287262 0.088388,-0.0221 1.8340583,-0.795495 1.8340583,-0.795495 l 0.287262,0 0.06629,-2.0550294 c 0,0 0.552427,-1.7456699 0.552427,-1.8561554 0,-0.1104854 -0.110485,-1.524699 -0.110485,-1.524699 z"
+       id="path2985"
+       inkscape:connector-curvature="0"
+       transform="translate(0,1036.3622)" />
     <g
        style="font-size:11.05178356px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#005597;fill-opacity:1;stroke:#005597;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;display:inline;font-family:AustralianFlyingCorpsStencil;-inkscape-font-specification:AustralianFlyingCorpsStencil"
        id="text3909-7-7-1"

@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URI;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -300,6 +301,10 @@ public class RasterizerUtil {
                 ImageIO.write(desaturated16, PNG, new File(icon.disabledPath,
                         icon.nameBase + ".png"));
             }
+            
+            File gif = new File(icon.inputPath.getParent(), icon.nameBase + ".gif");
+            
+            Files.copy(gif.toPath(), new File(icon.outputPath, icon.nameBase + ".gif").toPath());
         } catch (Exception e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
@@ -554,6 +559,7 @@ public class RasterizerUtil {
 
             System.out.println("Creating gallery for: " + key);
             renderGallery(targetDir, key, value, iconSize, width, 3);
+            renderGifCompareGallery(targetDir, key, value, iconSize, width, 6);
         }
 
         // Render the master image
@@ -562,6 +568,106 @@ public class RasterizerUtil {
         renderMasterGallery(targetDir, iconSize, iconSize + width, false);
     }
 
+    /**
+     * 
+     * @param root
+     * @param key
+     * @param value
+     * @param iconSize
+     * @param width
+     * @param margin
+     */
+    private void renderGifCompareGallery(File root, String key, List<IconDef> value,
+            int iconSize, int width, int margin) {
+    	int leftColumnWidth = 300;
+    	int textHeaderHeight = 31;
+        int outputSize = iconSize;
+        int widthTotal = (outputSize*4) + (margin * 6) + leftColumnWidth;
+        
+        int rowHeight = iconSize + (margin*2);
+        
+        // Compute the height and add some room for the text header (31 px)
+        int height = (value.size() * rowHeight) + textHeaderHeight;
+
+        BufferedImage bi = new BufferedImage(widthTotal + iconSize, height,
+                BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = bi.createGraphics();
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                RenderingHints.VALUE_ANTIALIAS_ON);
+
+        g.setColor(Color.GRAY);
+        g.drawString("SVG Icon Set: " + key + " - Count: " + value.size(), 8,
+                20);
+
+        int x = leftColumnWidth;
+        int y = textHeaderHeight;
+
+        // Render
+        ResampleOp resampleOp = new ResampleOp(outputSize, outputSize);
+        resampleOp.setFilter(ResampleFilters.getLanczos3Filter());
+        // resampleOp.setUnsharpenMask(AdvancedResizeOp.UnsharpenMask.Oversharpened);
+        resampleOp.setNumberOfThreads(Runtime.getRuntime()
+                .availableProcessors());
+
+        int second = leftColumnWidth + margin + iconSize;
+        
+        g.setColor(Color.WHITE);
+        g.fillRect(0, 0, widthTotal+10, height);
+        
+        g.setColor(Color.DARK_GRAY);
+        g.fillRect(second + (margin/2) + iconSize + 20, 0, (margin*2) + (iconSize*2)+10, height);
+
+        g.drawString(key + " (GIF / PNG)", 15, 20);
+        
+        // Render each icon into the gallery grid
+        for (IconDef def : value) {
+            // Skip failed icons
+            if (failedIcons.contains(def)) {
+                continue;
+            }
+
+            try {
+                if (def.galleryRasterPath == null) {
+                    System.err.println("Undefined gallery image for : "
+                            + def.nameBase);
+                    continue;
+                }
+
+                File gifPath = new File(def.galleryRasterPath.getParentFile(), def.nameBase + ".gif");
+                BufferedImage gifImage = ImageIO.read(gifPath);
+                BufferedImage iconImage = ImageIO.read(def.galleryRasterPath);
+                //BufferedImage sizedImage = resampleOp.filter(iconImage, null);
+
+                g.drawString(def.nameBase, 5, y+(margin*3));
+
+                g.drawLine(0, y, widthTotal, y);
+                g.drawImage(gifImage, leftColumnWidth, y + margin, null);
+                g.drawImage(iconImage, second, y + margin, null);
+                
+                g.drawImage(gifImage, second + margin + iconSize + 30, y + margin, null);
+                g.drawImage(iconImage, second + (margin*2) + (iconSize*2) + 30, y + margin, null);
+
+                y += iconSize + margin*2;
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                System.err.println("Error rendering icon for gallery: "
+                        + def.galleryRasterPath.getAbsolutePath());
+                continue;
+            }
+        }
+
+        try {
+            // Write the gallery image to disk
+            ImageIO.write(bi, "PNG", new File(root, key + "-" + iconSize
+                    + "-gifcompare.png"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    
+    
     /**
      * Renders an icon set into a grid within an image.
      * 

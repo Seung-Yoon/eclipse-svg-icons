@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="exportjar_wiz.svg">
   <defs
      id="defs4">
@@ -164,7 +164,7 @@
        x2="6.9999828"
        y1="1048.8934"
        x1="8.5"
-       gradientTransform="matrix(-1,0,0,-1,9,2100.7403)"
+       gradientTransform="translate(-3.998699,-2.3494536e-4)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient7131"
        xlink:href="#linearGradient4922-7-7"
@@ -178,15 +178,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627416"
-     inkscape:cx="15.553845"
+     inkscape:cx="15.362775"
      inkscape:cy="8.5817493"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="469"
-     inkscape:window-height="455"
-     inkscape:window-x="25"
-     inkscape:window-y="25"
+     inkscape:window-width="932"
+     inkscape:window-height="764"
+     inkscape:window-x="746"
+     inkscape:window-y="571"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -215,7 +215,7 @@
      transform="translate(0,-1036.3622)">
     <g
        id="g4083"
-       transform="matrix(0.90162747,0,0,0.90162747,0.30656226,102.31711)">
+       transform="matrix(0.90162747,0,0,0.90162747,3.3559604,102.31711)">
       <path
          sodipodi:nodetypes="ccssssssc"
          inkscape:connector-curvature="0"
@@ -248,7 +248,7 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path4920"
-       d="m 4.25,1052.3781 -4.25,0 0,-4.2813 z"
+       d="m 0.751301,1048.362 4.25,0 0,4.2813 z"
        style="fill:url(#linearGradient7131);fill-opacity:1;stroke:none;display:inline" />
   </g>
 </svg>

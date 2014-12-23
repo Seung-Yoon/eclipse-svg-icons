@@ -14,7 +14,7 @@
    height="16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="th_showqualified.svg">
   <defs
      id="defs4">
@@ -82,7 +82,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="32"
-     inkscape:cx="9.7745652"
+     inkscape:cx="4.1026902"
      inkscape:cy="7.4720029"
      inkscape:document-units="px"
      inkscape:current-layer="g11260-4"
@@ -125,38 +125,40 @@
          height="10.875"
          width="10.875"
          id="rect10961-8"
-         style="fill:url(#radialGradient11268-5-5-8-6);fill-opacity:1;stroke:#57423b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+         style="fill:url(#radialGradient11268-5-5-8-6);fill-opacity:1;stroke:#57423b;stroke-width:2.14568497;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
       <rect
          y="440.04636"
          x="373.38162"
          height="10.875"
          width="10.875"
          id="rect10961-9-0"
-         style="fill:url(#radialGradient11270-4-5-9-3);fill-opacity:1;stroke:#57423b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+         style="fill:url(#radialGradient11270-4-5-9-3);fill-opacity:1;stroke:#57423b;stroke-width:2.14568497;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
       <rect
          y="450.92136"
          x="362.50662"
          height="10.875"
          width="10.875"
          id="rect10961-3-9"
-         style="fill:url(#radialGradient11272-3-8-4-4);fill-opacity:1;stroke:#57423b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+         style="fill:url(#radialGradient11272-3-8-4-4);fill-opacity:1;stroke:#57423b;stroke-width:2.14568497;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
       <rect
          y="450.92136"
          x="373.38162"
          height="10.875"
          width="10.875"
          id="rect10961-9-6-4"
-         style="fill:url(#radialGradient11274-3-3-6-7);fill-opacity:1;stroke:#57423b;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+         style="fill:url(#radialGradient11274-3-3-6-7);fill-opacity:1;stroke:#57423b;stroke-width:2.14568497;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
       <path
-         style="fill:none;stroke:#57423b;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 357.97297,450.91149 30.58237,0"
+         style="fill:none;stroke:#57423b;stroke-width:2.14568496;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 359.44813,450.91149 28.03437,0"
          id="path11108-6"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
       <path
-         style="fill:none;stroke:#57423b;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-         d="m 373.26415,435.6203 0,30.58237"
+         style="fill:none;stroke:#57423b;stroke-width:2.14568496;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 373.3312,437.09546 0,28.03437"
          id="path11108-8-0"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
     </g>
   </g>
 </svg>
