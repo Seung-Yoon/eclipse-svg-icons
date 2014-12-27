@@ -131,9 +131,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="5.2130568"
-     inkscape:cy="10.691463"
+     inkscape:zoom="11.313709"
+     inkscape:cx="15.986869"
+     inkscape:cy="12.584171"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -179,7 +179,7 @@
        id="rect7415-2"
        width="1.0255631"
        height="12.123104"
-       x="-1042.3877"
+       x="-1043.36"
        y="2.0018957"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
@@ -239,7 +239,7 @@
        id="rect7415-2-4"
        width="1.0587088"
        height="12.073223"
-       x="-1044.3806"
+       x="-1045.3529"
        y="2.0205266"
        transform="matrix(0,-1,1,0,0,0)" />
     <rect
@@ -247,16 +247,8 @@
        id="rect7415-2-4-3"
        width="1.003466"
        height="12.137944"
-       x="-1046.3734"
+       x="-1047.3457"
        y="1.9870558"
-       transform="matrix(0,-1,1,0,0,0)" />
-    <rect
-       style="opacity:0.3487395;color:#000000;fill:#5b6c89;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect7415-2-4-3-9"
-       width="1.0255631"
-       height="12.121209"
-       x="-1048.3628"
-       y="2.0037913"
        transform="matrix(0,-1,1,0,0,0)" />
   </g>
 </svg>

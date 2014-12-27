@@ -13,7 +13,7 @@
    height="16"
    id="svg27656"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="annotation_alt_obj.svg">
   <defs
      id="defs27658" />
@@ -32,9 +32,10 @@
      showgrid="true"
      inkscape:window-width="903"
      inkscape:window-height="828"
-     inkscape:window-x="25"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0">
+     inkscape:window-x="470"
+     inkscape:window-y="485"
+     inkscape:window-maximized="0"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid27664"
@@ -60,6 +61,12 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1036.3622)">
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 11.111678,6.7192236 0.505076,-1.5783634 c 0,0 -0.06313,-1.2626907 -0.06313,-1.5152288 0,-0.2525381 -0.505077,-1.2626907 -0.505077,-1.2626907 L 9.7227182,0.7845774 8.523162,0.46890473 7.2604714,0.34263566 6.3765879,0.40577019 5.4295699,0.65830833 3.8512066,1.7315954 c 0,0 -0.6313454,0.6313453 -0.820749,0.8838835 -0.1894036,0.2525381 -0.947018,1.8309014 -0.947018,1.8309014 0,0 -0.1894036,1.5783634 -0.2525381,1.9571706 -0.063135,0.3788072 -0.063135,1.4520943 -0.063135,1.8309015 0,0.3788072 0.820749,2.3359776 0.820749,2.3359776 l 1.0101525,0.883884 1.767767,1.26269 2.3991122,-0.126269 1.5152288,-0.315672 1.641498,-1.262691 0.883884,-0.69448 z"
+       id="path3008"
+       inkscape:connector-curvature="0"
+       transform="translate(0,1036.3622)" />
     <g
        style="font-size:11.05178356000000100px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#777777;fill-opacity:1;stroke:#707070;stroke-width:0.10000000000000001;stroke-miterlimit:4;stroke-opacity:1;display:inline;font-family:AustralianFlyingCorpsStencil;-inkscape-font-specification:AustralianFlyingCorpsStencil"
        id="text3909-7-7-1"
